@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-modules/HRM Module" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">HRM Module Documentation | MarzPOS</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tino-ryan.github.io/marzpos/img/marzpos-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tino-ryan.github.io/marzpos/img/marzpos-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tino-ryan.github.io/marzpos/docs/modules/HRM Module"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="HRM Module Documentation | MarzPOS"><meta data-rh="true" name="description" content="Module: Essentials &amp; HRM (Human Resource Management) Module for UltimatePOS"><meta data-rh="true" property="og:description" content="Module: Essentials &amp; HRM (Human Resource Management) Module for UltimatePOS"><link data-rh="true" rel="icon" href="/marzpos/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tino-ryan.github.io/marzpos/docs/modules/HRM Module"><link data-rh="true" rel="alternate" href="https://tino-ryan.github.io/marzpos/docs/modules/HRM Module" hreflang="en"><link data-rh="true" rel="alternate" href="https://tino-ryan.github.io/marzpos/docs/modules/HRM Module" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"HRM Module Documentation","item":"https://tino-ryan.github.io/marzpos/docs/modules/HRM Module"}]}</script><link rel="stylesheet" href="/marzpos/assets/css/styles.c659887f.css">
+<script src="/marzpos/assets/js/runtime~main.393ceb1f.js" defer="defer"></script>
+<script src="/marzpos/assets/js/main.7877ed1e.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/marzpos/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/marzpos/"><div class="navbar__logo"><img src="/marzpos/img/logo.svg" alt="MarzPOS Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/marzpos/img/logo.svg" alt="MarzPOS Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">MarzPOS</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/marzpos/docs/intro">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://marzpos.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Live System<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://github.com/tino-ryan/marzpos" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/marzpos/docs/intro"><span title="Welcome to MarzPOS Documentation" class="linkLabel_WmDU">Welcome to MarzPOS Documentation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/marzpos/docs/testing"><span title="Testing Documentation" class="linkLabel_WmDU">Testing Documentation</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/marzpos/docs/category/tutorial---basics"><span title="Tutorial - Basics" class="categoryLinkLabel_W154">Tutorial - Basics</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Basics&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/marzpos/docs/category/tutorial---extras"><span title="Tutorial - Extras" class="categoryLinkLabel_W154">Tutorial - Extras</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Extras&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/marzpos/docs/SOPs"><span title="Standard Operating Procedures (SOPs)" class="categoryLinkLabel_W154">Standard Operating Procedures (SOPs)</span></a><button aria-label="Expand sidebar category &#x27;Standard Operating Procedures (SOPs)&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/marzpos/docs/modules/HRM Module"><span title="modules" class="categoryLinkLabel_W154">modules</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/marzpos/docs/modules/HRM Module"><span title="HRM Module Documentation" class="linkLabel_WmDU">HRM Module Documentation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/marzpos/docs/modules/VAT and Tax"><span title="VAT and Tax Configuration Documentation" class="linkLabel_WmDU">VAT and Tax Configuration Documentation</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/marzpos/docs/security/malwareport"><span title="security" class="categoryLinkLabel_W154">security</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/marzpos/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">modules</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">HRM Module Documentation</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>HRM Module Documentation</h1></header>
+<p><strong>Module:</strong> Essentials &amp; HRM (Human Resource Management) Module for UltimatePOS<br>
+<strong>Reference:</strong> Based on official documentation from Ultimate Fosters<br>
+<strong>Date:</strong> January 06, 2026<br>
+<strong>Official Documentation Link:</strong> <a href="https://ultimatefosters.com/docs/ultimatepos/essentials-hrm-module-addon/addon-essentials-module-for-ultimatepos-hrm-features/" target="_blank" rel="noopener noreferrer" class="">HRM Features in Essentials Module</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="table-of-contents">Table of Contents<a href="#table-of-contents" class="hash-link" aria-label="Direct link to Table of Contents" title="Direct link to Table of Contents" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="#overview" class="">Overview</a></li>
+<li class=""><a href="#leave-management" class="">Leave Management</a>
+<ul>
+<li class=""><a href="#adding-a-leave" class="">Adding a Leave</a></li>
+<li class=""><a href="#leave-approval" class="">Leave Approval</a></li>
+<li class=""><a href="#leave-types-admin-only" class="">Leave Types (Admin Only)</a></li>
+<li class=""><a href="#leaves-summary" class="">Leaves Summary</a></li>
+</ul>
+</li>
+<li class=""><a href="#attendance-management" class="">Attendance Management</a>
+<ul>
+<li class=""><a href="#clock-inout" class="">Clock In/Out</a></li>
+<li class=""><a href="#settings" class="">Settings</a></li>
+<li class=""><a href="#location-tracking" class="">Location Tracking</a></li>
+<li class=""><a href="#biometric-integration" class="">Biometric Integration</a></li>
+<li class=""><a href="#shift-management" class="">Shift Management</a></li>
+</ul>
+</li>
+<li class=""><a href="#payroll-management" class="">Payroll Management</a>
+<ul>
+<li class=""><a href="#adding-payroll" class="">Adding Payroll</a></li>
+<li class=""><a href="#editing-payroll" class="">Editing Payroll</a></li>
+<li class=""><a href="#payments" class="">Payments</a></li>
+</ul>
+</li>
+<li class=""><a href="#holidays-management" class="">Holidays Management</a></li>
+<li class=""><a href="#permissions--settings" class="">Permissions &amp; Settings</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<a id="overview"></a>
+<p>The HRM module in the UltimatePOS system (part of the Essentials addon) is loaded with features to handle all aspects of personnel management, including payroll, attendance, leave management, holidays, shifts, sales targets, and other critical operations.</p>
+<p><strong>Note:</strong> This document explains the HRM (Human Resource Management) features in the Essentials module. For other features in the Essentials module, refer <a href="https://ultimatefosters.com/docs/ultimatepos/addons/addon-essentials-module-for-ultimatepos-advance/" target="_blank" rel="noopener noreferrer" class="">here</a>.</p>
+<p>After installing and configuring the Essentials module, you will see the <strong>HRM</strong> menu (along with the Essentials menu) in the left sidebar.</p>
+<p>The HRM module consists of:</p>
+<ol>
+<li class="">Leave Types &amp; Leaves</li>
+<li class="">Attendance</li>
+<li class="">Payroll</li>
+<li class="">Holidays</li>
+<li class="">Shifts</li>
+<li class="">Related Settings &amp; Permissions</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="leave-management">Leave Management<a href="#leave-management" class="hash-link" aria-label="Direct link to Leave Management" title="Direct link to Leave Management" translate="no">​</a></h2>
+<a id="leave-management"></a>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="adding-a-leave">Adding a Leave<a href="#adding-a-leave" class="hash-link" aria-label="Direct link to Adding a Leave" title="Direct link to Adding a Leave" translate="no">​</a></h3>
+<a id="adding-a-leave"></a>
+<ul>
+<li class=""><strong>Fields:</strong> Leave Type (dropdown), Start Date, End Date, Reason (text area)</li>
+<li class="">Default status of a new leave: <strong>Pending</strong></li>
+<li class="">Reference No.: Automatically generated (prefix configurable in HRM &gt; Settings &gt; Leave Reference No. prefix)</li>
+<li class="">Leave Instructions: Special instructions for users can be added in Settings &gt; “Leave Instructions” field</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="leave-approval">Leave Approval<a href="#leave-approval" class="hash-link" aria-label="Direct link to Leave Approval" title="Direct link to Leave Approval" translate="no">​</a></h3>
+<a id="leave-approval"></a>
+<ul>
+<li class="">Admin (or users with &quot;Approve Leave&quot; permission) can change status: <strong>Pending</strong>, <strong>Canceled</strong>, <strong>Approved</strong> (click on status column button)</li>
+<li class=""><strong>Approve Additional Leaves:</strong> Checkbox to allow approval of leaves exceeding the max limit</li>
+<li class="">Notifications: In-app notification to admin on new leave; to user on status change</li>
+<li class="">Only admin can delete a leave</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="leave-types-admin-only">Leave Types (Admin Only)<a href="#leave-types-admin-only" class="hash-link" aria-label="Direct link to Leave Types (Admin Only)" title="Direct link to Leave Types (Admin Only)" translate="no">​</a></h3>
+<a id="leave-types-admin-only"></a>
+<ul>
+<li class=""><strong>Fields:</strong>
+<ul>
+<li class="">Leave Type: Name (e.g., &quot;Sick Leave&quot;)</li>
+<li class="">Max Leave Counts: Maximum allowed</li>
+<li class="">Leave Count Interval: &quot;Current month&quot;, &quot;Current financial year&quot;, or &quot;None&quot;</li>
+</ul>
+</li>
+<li class="">Example: 12 Sick Leaves per financial year</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="leaves-summary">Leaves Summary<a href="#leaves-summary" class="hash-link" aria-label="Direct link to Leaves Summary" title="Direct link to Leaves Summary" translate="no">​</a></h3>
+<a id="leaves-summary"></a>
+<ul>
+<li class="">Admin: View summary for any employee (filter on Leaves page)</li>
+<li class="">Users: Always visible for their own leaves (summary at bottom of page)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="attendance-management">Attendance Management<a href="#attendance-management" class="hash-link" aria-label="Direct link to Attendance Management" title="Direct link to Attendance Management" translate="no">​</a></h2>
+<a id="attendance-management"></a>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="clock-inout">Clock In/Out<a href="#clock-inout" class="hash-link" aria-label="Direct link to Clock In/Out" title="Direct link to Clock In/Out" translate="no">​</a></h3>
+<a id="clock-inout"></a>
+<ul>
+<li class="">Users can clock in/out via top navigation bar (&quot;Clock In&quot; / &quot;Clock Out&quot; buttons) with notes</li>
+<li class="">Admin can add/edit attendance for any user</li>
+<li class="">Fields (Admin): Employee, Date, IP Address (auto), Note, Clock In Time, Clock Out Time</li>
+<li class="">Total work hours displayed (per user or own)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="settings">Settings<a href="#settings" class="hash-link" aria-label="Direct link to Settings" title="Direct link to Settings" translate="no">​</a></h3>
+<a id="settings"></a>
+<ul>
+<li class=""><strong>Allow users to enter their own attendance:</strong> Enable in HRM &gt; Settings &gt; HRM tab or via Role permissions</li>
+<li class=""><strong>Grace Time (for fixed shifts):</strong>
+<ul>
+<li class="">Grace before/after check-in (late/early tolerance)</li>
+<li class="">Grace before/after checkout</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="location-tracking">Location Tracking<a href="#location-tracking" class="hash-link" aria-label="Direct link to Location Tracking" title="Direct link to Location Tracking" translate="no">​</a></h3>
+<a id="location-tracking"></a>
+<ul>
+<li class="">Enable in HRM &gt; Settings &gt; Attendance Tab &gt; &quot;Is Location Required?&quot;</li>
+<li class="">Requires HTTPS</li>
+<li class="">Accuracy: Better on mobile (GPS); approximate on laptop (IP-based)</li>
+<li class="">Map APIs: OpenStreetMap (free, default) or Google Maps (paid, more accurate – set GOOGLE_MAP_API_KEY in .env)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biometric-integration">Biometric Integration<a href="#biometric-integration" class="hash-link" aria-label="Direct link to Biometric Integration" title="Direct link to Biometric Integration" translate="no">​</a></h3>
+<a id="biometric-integration"></a>
+<ul>
+<li class="">Import attendance from biometric Excel export using &quot;Import Attendance&quot; feature</li>
+<li class="">Ensure date format: &quot;Y-m-d H:i<!-- -->:s<!-- -->&quot; and text format in Excel</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="shift-management">Shift Management<a href="#shift-management" class="hash-link" aria-label="Direct link to Shift Management" title="Direct link to Shift Management" translate="no">​</a></h3>
+<a id="shift-management"></a>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="types-of-shifts">Types of Shifts<a href="#types-of-shifts" class="hash-link" aria-label="Direct link to Types of Shifts" title="Direct link to Types of Shifts" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Fixed Shift:</strong> Specific start/end times; clock in/out only within allowed time (with grace)</li>
+<li class=""><strong>Flexible Shift:</strong> No specific timing; clock in/out anytime</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="assigning-shifts">Assigning Shifts<a href="#assigning-shifts" class="hash-link" aria-label="Direct link to Assigning Shifts" title="Direct link to Assigning Shifts" translate="no">​</a></h4>
+<ul>
+<li class="">Assign shifts to users for specific dates</li>
+<li class="">Error &quot;No active shift at this time&quot;: No fixed shift available – add manually or adjust shifts</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="auto-clock-out">Auto Clock Out<a href="#auto-clock-out" class="hash-link" aria-label="Direct link to Auto Clock Out" title="Direct link to Auto Clock Out" translate="no">​</a></h4>
+<ul>
+<li class="">Enable to automatically clock out users at shift end</li>
+</ul>
+<p><strong>Video Demonstration:</strong> Available in official docs (e.g., <a href="https://youtu.be/Xu1yx6cXs2g" target="_blank" rel="noopener noreferrer" class="">https://youtu.be/Xu1yx6cXs2g</a>)</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="payroll-management">Payroll Management<a href="#payroll-management" class="hash-link" aria-label="Direct link to Payroll Management" title="Direct link to Payroll Management" translate="no">​</a></h2>
+<a id="payroll-management"></a>
+<ul>
+<li class="">Admin only adds payroll; users view their own</li>
+<li class="">Reference No.: Auto-generated (prefix configurable in Settings)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="adding-payroll">Adding Payroll<a href="#adding-payroll" class="hash-link" aria-label="Direct link to Adding Payroll" title="Direct link to Adding Payroll" translate="no">​</a></h3>
+<a id="adding-payroll"></a>
+<ul>
+<li class="">Select Employee, Month/Year</li>
+<li class="">Auto-calculates:<!-- -->
+<ul>
+<li class="">Total Work Duration (from attendance)</li>
+<li class="">Duration Unit (e.g., hour/month)</li>
+<li class="">Amount per Unit</li>
+<li class="">Total = Duration × Amount per Unit</li>
+</ul>
+</li>
+<li class="">Add Allowances (multiple) and Deductions</li>
+<li class="">Gross Amount = Total + Allowances – Deductions</li>
+<li class="">Notification to user on addition</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="editing-payroll">Editing Payroll<a href="#editing-payroll" class="hash-link" aria-label="Direct link to Editing Payroll" title="Direct link to Editing Payroll" translate="no">​</a></h3>
+<a id="editing-payroll"></a>
+<ul>
+<li class="">Via &quot;All Payroll Groups&quot; &gt; Action &gt; Edit</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="payments">Payments<a href="#payments" class="hash-link" aria-label="Direct link to Payments" title="Direct link to Payments" translate="no">​</a></h3>
+<a id="payments"></a>
+<ul>
+<li class="">Full Payment: Action &gt; Payment</li>
+<li class="">Partial/Bulk Payments: Via &quot;All Payroll Payment&quot; tab &gt; Add Payment (with notes)</li>
+<li class="">Bonus: Add as allowance with description &quot;bonus&quot;</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="holidays-management">Holidays Management<a href="#holidays-management" class="hash-link" aria-label="Direct link to Holidays Management" title="Direct link to Holidays Management" translate="no">​</a></h2>
+<a id="holidays-management"></a>
+<ul>
+<li class="">Admin only adds holidays</li>
+<li class="">Users view holidays for their location</li>
+<li class="">Fields: Name, Start Date, End Date, Business Location, Note</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="permissions--settings">Permissions &amp; Settings<a href="#permissions--settings" class="hash-link" aria-label="Direct link to Permissions &amp; Settings" title="Direct link to Permissions &amp; Settings" translate="no">​</a></h2>
+<a id="permissions--settings"></a>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-permissions">Key Permissions<a href="#key-permissions" class="hash-link" aria-label="Direct link to Key Permissions" title="Direct link to Key Permissions" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Approve Leave:</strong> Assign to roles for non-admin approval</li>
+<li class=""><strong>Allow users to enter their own attendance:</strong> Via Roles or HRM Settings</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hrm-settings">HRM Settings<a href="#hrm-settings" class="hash-link" aria-label="Direct link to HRM Settings" title="Direct link to HRM Settings" translate="no">​</a></h3>
+<ul>
+<li class="">Accessible via HRM &gt; Settings</li>
+<li class="">Tabs: General, Leave, Attendance, Payroll, etc.</li>
+<li class="">Configure prefixes, instructions, location, etc.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="additional-notes">Additional Notes<a href="#additional-notes" class="hash-link" aria-label="Direct link to Additional Notes" title="Direct link to Additional Notes" translate="no">​</a></h2>
+<ul>
+<li class="">Compatible with SaaS/Superadmin module</li>
+<li class="">Recent Updates (as of 2025): Partial payroll payments, payment notes, employee birthday dashboard, etc.</li>
+<li class="">For sales targets and other Essentials features: Refer to separate documentation</li>
+</ul>
+<p><strong>PREPARED BY:</strong> Tinotenda Gozho<br>
+<strong>DATE:</strong> 05/01/2026</p>
+<p><strong>For official updates and videos:</strong> Visit <a href="https://ultimatefosters.com/docs/ultimatepos/" target="_blank" rel="noopener noreferrer" class="">Ultimate Fosters Documentation</a></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/tino-ryan/marzpos/tree/main/docs/modules/HRM Module.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/marzpos/docs/SOPs/regular"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Daily / Weekly / Monthly Task Checklists &amp; Staff Scheduling</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/marzpos/docs/modules/VAT and Tax"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">VAT and Tax Configuration Documentation</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#table-of-contents" class="table-of-contents__link toc-highlight">Table of Contents</a></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#leave-management" class="table-of-contents__link toc-highlight">Leave Management</a><ul><li><a href="#adding-a-leave" class="table-of-contents__link toc-highlight">Adding a Leave</a></li><li><a href="#leave-approval" class="table-of-contents__link toc-highlight">Leave Approval</a></li><li><a href="#leave-types-admin-only" class="table-of-contents__link toc-highlight">Leave Types (Admin Only)</a></li><li><a href="#leaves-summary" class="table-of-contents__link toc-highlight">Leaves Summary</a></li></ul></li><li><a href="#attendance-management" class="table-of-contents__link toc-highlight">Attendance Management</a><ul><li><a href="#clock-inout" class="table-of-contents__link toc-highlight">Clock In/Out</a></li><li><a href="#settings" class="table-of-contents__link toc-highlight">Settings</a></li><li><a href="#location-tracking" class="table-of-contents__link toc-highlight">Location Tracking</a></li><li><a href="#biometric-integration" class="table-of-contents__link toc-highlight">Biometric Integration</a></li><li><a href="#shift-management" class="table-of-contents__link toc-highlight">Shift Management</a></li></ul></li><li><a href="#payroll-management" class="table-of-contents__link toc-highlight">Payroll Management</a><ul><li><a href="#adding-payroll" class="table-of-contents__link toc-highlight">Adding Payroll</a></li><li><a href="#editing-payroll" class="table-of-contents__link toc-highlight">Editing Payroll</a></li><li><a href="#payments" class="table-of-contents__link toc-highlight">Payments</a></li></ul></li><li><a href="#holidays-management" class="table-of-contents__link toc-highlight">Holidays Management</a></li><li><a href="#permissions--settings" class="table-of-contents__link toc-highlight">Permissions &amp; Settings</a><ul><li><a href="#key-permissions" class="table-of-contents__link toc-highlight">Key Permissions</a></li><li><a href="#hrm-settings" class="table-of-contents__link toc-highlight">HRM Settings</a></li></ul></li><li><a href="#additional-notes" class="table-of-contents__link toc-highlight">Additional Notes</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/marzpos/docs/intro">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/marzpos/docs/sops">Standard Operating Procedures</a></li><li class="footer__item"><a class="footer__link-item" href="/marzpos/docs/modules/pos-system">Modules</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">System</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://marzpos.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Production Site<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://marztest.marzpos.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Test Environment<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.vapegarage.co.za/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Vape Garage Store<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/tino-ryan/marzpos" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/tino-ryan/marzpos/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">Report Issue<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 SOFTA - Tinotenda Gozho & Mckale. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

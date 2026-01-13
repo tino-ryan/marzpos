@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-testing/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Testing Documentation | MarzPOS</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tino-ryan.github.io/marzpos/img/marzpos-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tino-ryan.github.io/marzpos/img/marzpos-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tino-ryan.github.io/marzpos/docs/testing"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Testing Documentation | MarzPOS"><meta data-rh="true" name="description" content="Welcome to the MarzPOS Testing Documentation. This section covers all testing procedures, methodologies, and guidelines to ensure system quality and reliability."><meta data-rh="true" property="og:description" content="Welcome to the MarzPOS Testing Documentation. This section covers all testing procedures, methodologies, and guidelines to ensure system quality and reliability."><link data-rh="true" rel="icon" href="/marzpos/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tino-ryan.github.io/marzpos/docs/testing"><link data-rh="true" rel="alternate" href="https://tino-ryan.github.io/marzpos/docs/testing" hreflang="en"><link data-rh="true" rel="alternate" href="https://tino-ryan.github.io/marzpos/docs/testing" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Testing Documentation","item":"https://tino-ryan.github.io/marzpos/docs/testing/"}]}</script><link rel="stylesheet" href="/marzpos/assets/css/styles.c659887f.css">
+<script src="/marzpos/assets/js/runtime~main.393ceb1f.js" defer="defer"></script>
+<script src="/marzpos/assets/js/main.7877ed1e.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/marzpos/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/marzpos/"><div class="navbar__logo"><img src="/marzpos/img/logo.svg" alt="MarzPOS Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/marzpos/img/logo.svg" alt="MarzPOS Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">MarzPOS</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/marzpos/docs/intro">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://marzpos.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Live System<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://github.com/tino-ryan/marzpos" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/marzpos/docs/intro"><span title="Welcome to MarzPOS Documentation" class="linkLabel_WmDU">Welcome to MarzPOS Documentation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/marzpos/docs/testing"><span title="Testing Documentation" class="linkLabel_WmDU">Testing Documentation</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/marzpos/docs/category/tutorial---basics"><span title="Tutorial - Basics" class="categoryLinkLabel_W154">Tutorial - Basics</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Basics&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/marzpos/docs/category/tutorial---extras"><span title="Tutorial - Extras" class="categoryLinkLabel_W154">Tutorial - Extras</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Extras&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/marzpos/docs/SOPs"><span title="Standard Operating Procedures (SOPs)" class="categoryLinkLabel_W154">Standard Operating Procedures (SOPs)</span></a><button aria-label="Expand sidebar category &#x27;Standard Operating Procedures (SOPs)&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/marzpos/docs/modules/HRM Module"><span title="modules" class="categoryLinkLabel_W154">modules</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/marzpos/docs/security/malwareport"><span title="security" class="categoryLinkLabel_W154">security</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/marzpos/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Testing Documentation</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Testing Documentation</h1></header>
+<p>Welcome to the MarzPOS Testing Documentation. This section covers all testing procedures, methodologies, and guidelines to ensure system quality and reliability.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-overview">📋 Overview<a href="#-overview" class="hash-link" aria-label="Direct link to 📋 Overview" title="Direct link to 📋 Overview" translate="no">​</a></h2>
+<p>Testing is critical to maintaining the stability, security, and performance of MarzPOS. Our comprehensive testing approach covers all features and functions across modules to ensure the system meets business requirements and provides a reliable experience for users.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-testing-philosophy">🎯 Testing Philosophy<a href="#-testing-philosophy" class="hash-link" aria-label="Direct link to 🎯 Testing Philosophy" title="Direct link to 🎯 Testing Philosophy" translate="no">​</a></h2>
+<p>Our testing strategy is built on these principles:</p>
+<ul>
+<li class=""><strong>Comprehensive Coverage</strong> - All features and functions are tested</li>
+<li class=""><strong>Automated Testing</strong> - Reduce manual effort and increase reliability</li>
+<li class=""><strong>Continuous Testing</strong> - Tests run on every code change</li>
+<li class=""><strong>Real-world Scenarios</strong> - Tests reflect actual business operations</li>
+<li class=""><strong>Documentation</strong> - All tests are documented and maintainable</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-testing-documentation">📚 Testing Documentation<a href="#-testing-documentation" class="hash-link" aria-label="Direct link to 📚 Testing Documentation" title="Direct link to 📚 Testing Documentation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="testing-fundamentals">Testing Fundamentals<a href="#testing-fundamentals" class="hash-link" aria-label="Direct link to Testing Fundamentals" title="Direct link to Testing Fundamentals" translate="no">​</a></h3>
+<ul>
+<li class=""><a href="#testing-overview" class=""><strong>Testing Overview</strong></a> - Introduction to our testing approach</li>
+<li class=""><a class="" href="/marzpos/docs/testing-guidelines"><strong>Testing Guidelines</strong></a> - Best practices and standards for writing tests</li>
+<li class=""><a href="#test-environment-setup" class=""><strong>Test Environment Setup</strong></a> - Setting up test environments</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="testing-types">Testing Types<a href="#testing-types" class="hash-link" aria-label="Direct link to Testing Types" title="Direct link to Testing Types" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="/marzpos/docs/unit-testing"><strong>Unit Testing</strong></a> - Testing individual components and functions</li>
+<li class=""><a class="" href="/marzpos/docs/integration-testing"><strong>Integration Testing</strong></a> - Testing module interactions and workflows</li>
+<li class=""><a href="#system-testing" class=""><strong>System Testing</strong></a> - End-to-end testing of complete features</li>
+<li class=""><a href="#user-acceptance-testing" class=""><strong>User Acceptance Testing (UAT)</strong></a> - Business validation testing</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="feature-testing">Feature Testing<a href="#feature-testing" class="hash-link" aria-label="Direct link to Feature Testing" title="Direct link to Feature Testing" translate="no">​</a></h3>
+<ul>
+<li class=""><a href="#pos-system-testing" class=""><strong>POS System Testing</strong></a> - Point of sale transaction testing</li>
+<li class=""><a href="#inventory-testing" class=""><strong>Inventory Testing</strong></a> - Stock management and tracking tests</li>
+<li class=""><a href="#customer-management-testing" class=""><strong>Customer Management Testing</strong></a> - CRM functionality tests</li>
+<li class=""><a href="#woocommerce-integration-testing" class=""><strong>WooCommerce Integration Testing</strong></a> - E-commerce sync testing</li>
+<li class=""><a href="#accounting-testing" class=""><strong>Accounting Testing</strong></a> - Financial operations testing</li>
+<li class=""><a href="#hrm-testing" class=""><strong>HRM Testing</strong></a> - Human resource management tests</li>
+<li class=""><a href="#reporting-testing" class=""><strong>Reporting Testing</strong></a> - Report generation and accuracy tests</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="quality-metrics">Quality Metrics<a href="#quality-metrics" class="hash-link" aria-label="Direct link to Quality Metrics" title="Direct link to Quality Metrics" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="/marzpos/docs/test-coverage"><strong>Test Coverage</strong></a> - Coverage metrics and goals</li>
+<li class=""><a href="#performance-testing" class=""><strong>Performance Testing</strong></a> - Speed and load testing</li>
+<li class=""><a href="#security-testing" class=""><strong>Security Testing</strong></a> - Vulnerability and penetration testing</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-testing-overview">🧪 Testing Overview<a href="#-testing-overview" class="hash-link" aria-label="Direct link to 🧪 Testing Overview" title="Direct link to 🧪 Testing Overview" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-we-test">What We Test<a href="#what-we-test" class="hash-link" aria-label="Direct link to What We Test" title="Direct link to What We Test" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-functionality">Core Functionality<a href="#core-functionality" class="hash-link" aria-label="Direct link to Core Functionality" title="Direct link to Core Functionality" translate="no">​</a></h4>
+<ul>
+<li class="">All CRUD operations (Create, Read, Update, Delete)</li>
+<li class="">Business logic and calculations</li>
+<li class="">User permissions and access control</li>
+<li class="">Data validation and error handling</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-points">Integration Points<a href="#integration-points" class="hash-link" aria-label="Direct link to Integration Points" title="Direct link to Integration Points" translate="no">​</a></h4>
+<ul>
+<li class="">WooCommerce synchronization</li>
+<li class="">Payment gateway processing</li>
+<li class="">Email notifications</li>
+<li class="">Third-party API connections</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-experience">User Experience<a href="#user-experience" class="hash-link" aria-label="Direct link to User Experience" title="Direct link to User Experience" translate="no">​</a></h4>
+<ul>
+<li class="">Page load times</li>
+<li class="">Form submissions</li>
+<li class="">Navigation flows</li>
+<li class="">Mobile responsiveness</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="data-integrity">Data Integrity<a href="#data-integrity" class="hash-link" aria-label="Direct link to Data Integrity" title="Direct link to Data Integrity" translate="no">​</a></h4>
+<ul>
+<li class="">Database transactions</li>
+<li class="">Data consistency across modules</li>
+<li class="">Backup and recovery</li>
+<li class="">Report accuracy</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-test-environment-setup">🏗️ Test Environment Setup<a href="#️-test-environment-setup" class="hash-link" aria-label="Direct link to 🏗️ Test Environment Setup" title="Direct link to 🏗️ Test Environment Setup" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="production-environment">Production Environment<a href="#production-environment" class="hash-link" aria-label="Direct link to Production Environment" title="Direct link to Production Environment" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>URL</strong>: <a href="https://marzpos.com" target="_blank" rel="noopener noreferrer" class="">https://marzpos.com</a></li>
+<li class=""><strong>Purpose</strong>: Live system (limited testing only)</li>
+<li class=""><strong>Database</strong>: Production MySQL</li>
+<li class=""><strong>Access</strong>: Restricted to administrators</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-environment">Test Environment<a href="#test-environment" class="hash-link" aria-label="Direct link to Test Environment" title="Direct link to Test Environment" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>URL</strong>: <a href="https://marztest.marzpos.com" target="_blank" rel="noopener noreferrer" class="">https://marztest.marzpos.com</a></li>
+<li class=""><strong>Purpose</strong>: Primary testing environment</li>
+<li class=""><strong>Database</strong>: Test MySQL database</li>
+<li class=""><strong>Access</strong>: Available to all testers</li>
+<li class=""><strong>Data</strong>: Sanitized copy of production data</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="local-development">Local Development<a href="#local-development" class="hash-link" aria-label="Direct link to Local Development" title="Direct link to Local Development" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Setup</strong>: Developer local machines</li>
+<li class=""><strong>Purpose</strong>: Feature development and unit testing</li>
+<li class=""><strong>Database</strong>: Local MySQL instance</li>
+<li class=""><strong>Access</strong>: Individual developers</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="environment-comparison">Environment Comparison<a href="#environment-comparison" class="hash-link" aria-label="Direct link to Environment Comparison" title="Direct link to Environment Comparison" translate="no">​</a></h3>
+<table><thead><tr><th>Feature</th><th>Production</th><th>Test</th><th>Local</th></tr></thead><tbody><tr><td>Testing Type</td><td>Smoke tests only</td><td>Full testing</td><td>Unit/Integration</td></tr><tr><td>Data</td><td>Live customer data</td><td>Sanitized test data</td><td>Sample data</td></tr><tr><td>Access</td><td>Restricted</td><td>Team access</td><td>Developer only</td></tr><tr><td>Updates</td><td>Scheduled releases</td><td>Continuous</td><td>On-demand</td></tr><tr><td>Monitoring</td><td>24/7</td><td>Business hours</td><td>None</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-testing-workflow">🔄 Testing Workflow<a href="#-testing-workflow" class="hash-link" aria-label="Direct link to 🔄 Testing Workflow" title="Direct link to 🔄 Testing Workflow" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-pre-development">1. Pre-Development<a href="#1-pre-development" class="hash-link" aria-label="Direct link to 1. Pre-Development" title="Direct link to 1. Pre-Development" translate="no">​</a></h3>
+<ul>
+<li class="">Review requirements and acceptance criteria</li>
+<li class="">Write test plan and test cases</li>
+<li class="">Set up test data and environment</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-during-development">2. During Development<a href="#2-during-development" class="hash-link" aria-label="Direct link to 2. During Development" title="Direct link to 2. During Development" translate="no">​</a></h3>
+<ul>
+<li class="">Write unit tests alongside code</li>
+<li class="">Run tests locally before committing</li>
+<li class="">Ensure tests pass in CI/CD pipeline</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-post-development">3. Post-Development<a href="#3-post-development" class="hash-link" aria-label="Direct link to 3. Post-Development" title="Direct link to 3. Post-Development" translate="no">​</a></h3>
+<ul>
+<li class="">Deploy to test environment</li>
+<li class="">Execute integration tests</li>
+<li class="">Perform manual exploratory testing</li>
+<li class="">Document any issues found</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-pre-release">4. Pre-Release<a href="#4-pre-release" class="hash-link" aria-label="Direct link to 4. Pre-Release" title="Direct link to 4. Pre-Release" translate="no">​</a></h3>
+<ul>
+<li class="">Run full regression test suite</li>
+<li class="">Conduct user acceptance testing</li>
+<li class="">Verify all critical paths work</li>
+<li class="">Get stakeholder sign-off</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-post-release">5. Post-Release<a href="#5-post-release" class="hash-link" aria-label="Direct link to 5. Post-Release" title="Direct link to 5. Post-Release" translate="no">​</a></h3>
+<ul>
+<li class="">Monitor production for issues</li>
+<li class="">Run smoke tests</li>
+<li class="">Validate key metrics</li>
+<li class="">Document lessons learned</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-test-types-explained">📊 Test Types Explained<a href="#-test-types-explained" class="hash-link" aria-label="Direct link to 📊 Test Types Explained" title="Direct link to 📊 Test Types Explained" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="unit-testing">Unit Testing<a href="#unit-testing" class="hash-link" aria-label="Direct link to Unit Testing" title="Direct link to Unit Testing" translate="no">​</a></h3>
+<p>Tests individual functions or methods in isolation.</p>
+<p><strong>Example:</strong> Testing that the VAT calculation function correctly computes 15% tax on R100 = R15</p>
+<p><strong>Tools:</strong> PHPUnit, Jest</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-testing">Integration Testing<a href="#integration-testing" class="hash-link" aria-label="Direct link to Integration Testing" title="Direct link to Integration Testing" translate="no">​</a></h3>
+<p>Tests how multiple components work together.</p>
+<p><strong>Example:</strong> Testing that when a sale is made in POS, inventory is updated AND customer loyalty points are added</p>
+<p><strong>Tools:</strong> PHPUnit with database, API testing tools</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-testing">System Testing<a href="#system-testing" class="hash-link" aria-label="Direct link to System Testing" title="Direct link to System Testing" translate="no">​</a></h3>
+<p>Tests complete end-to-end workflows.</p>
+<p><strong>Example:</strong> Testing the complete customer journey from browsing products to checkout to receipt generation</p>
+<p><strong>Tools:</strong> Manual testing, automated browser testing</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-acceptance-testing-uat">User Acceptance Testing (UAT)<a href="#user-acceptance-testing-uat" class="hash-link" aria-label="Direct link to User Acceptance Testing (UAT)" title="Direct link to User Acceptance Testing (UAT)" translate="no">​</a></h3>
+<p>Tests by end users to validate business requirements.</p>
+<p><strong>Example:</strong> Vape Garage staff testing a new loyalty program feature to ensure it meets their needs</p>
+<p><strong>Tools:</strong> Test environment, UAT scripts</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-feature-testing-coverage">🎯 Feature Testing Coverage<a href="#-feature-testing-coverage" class="hash-link" aria-label="Direct link to 🎯 Feature Testing Coverage" title="Direct link to 🎯 Feature Testing Coverage" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pos-system-testing">POS System Testing<a href="#pos-system-testing" class="hash-link" aria-label="Direct link to POS System Testing" title="Direct link to POS System Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Transaction processing (cash, card, split payments)</li>
+<li class="">Receipt generation and printing</li>
+<li class="">Refunds and exchanges</li>
+<li class="">Till open/close procedures</li>
+<li class="">Multi-user handling</li>
+<li class="">Offline mode functionality</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inventory-testing">Inventory Testing<a href="#inventory-testing" class="hash-link" aria-label="Direct link to Inventory Testing" title="Direct link to Inventory Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Product creation and management</li>
+<li class="">Stock level tracking</li>
+<li class="">Reorder point alerts</li>
+<li class="">Supplier management</li>
+<li class="">Stock transfers between locations</li>
+<li class="">Inventory adjustments</li>
+<li class="">Barcode scanning</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="customer-management-testing">Customer Management Testing<a href="#customer-management-testing" class="hash-link" aria-label="Direct link to Customer Management Testing" title="Direct link to Customer Management Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Customer registration</li>
+<li class="">Purchase history tracking</li>
+<li class="">Loyalty points calculation</li>
+<li class="">Customer groups and pricing</li>
+<li class="">Marketing communications</li>
+<li class="">Data export functionality</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="woocommerce-integration-testing">WooCommerce Integration Testing<a href="#woocommerce-integration-testing" class="hash-link" aria-label="Direct link to WooCommerce Integration Testing" title="Direct link to WooCommerce Integration Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Product synchronization</li>
+<li class="">Stock level sync</li>
+<li class="">Order import from online store</li>
+<li class="">Customer data sync</li>
+<li class="">Price updates</li>
+<li class="">Category mapping</li>
+<li class="">Image synchronization</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="accounting-testing">Accounting Testing<a href="#accounting-testing" class="hash-link" aria-label="Direct link to Accounting Testing" title="Direct link to Accounting Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Invoice generation</li>
+<li class="">Payment recording</li>
+<li class="">Expense tracking</li>
+<li class="">VAT calculations</li>
+<li class="">Financial report accuracy</li>
+<li class="">Bank reconciliation</li>
+<li class="">Tax compliance</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hrm-testing">HRM Testing<a href="#hrm-testing" class="hash-link" aria-label="Direct link to HRM Testing" title="Direct link to HRM Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Employee management</li>
+<li class="">Attendance tracking</li>
+<li class="">Leave management</li>
+<li class="">Payroll calculations</li>
+<li class="">Performance reviews</li>
+<li class="">Role and permission management</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="reporting-testing">Reporting Testing<a href="#reporting-testing" class="hash-link" aria-label="Direct link to Reporting Testing" title="Direct link to Reporting Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Sales reports accuracy</li>
+<li class="">Inventory reports</li>
+<li class="">Customer reports</li>
+<li class="">Financial reports</li>
+<li class="">Custom report generation</li>
+<li class="">Report exports (PDF, Excel, CSV)</li>
+<li class="">Scheduled reports</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-quality-metrics">📈 Quality Metrics<a href="#-quality-metrics" class="hash-link" aria-label="Direct link to 📈 Quality Metrics" title="Direct link to 📈 Quality Metrics" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-coverage-goals">Test Coverage Goals<a href="#test-coverage-goals" class="hash-link" aria-label="Direct link to Test Coverage Goals" title="Direct link to Test Coverage Goals" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Unit Tests</strong>: 80%+ code coverage</li>
+<li class=""><strong>Integration Tests</strong>: All critical paths covered</li>
+<li class=""><strong>System Tests</strong>: All user workflows validated</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-benchmarks">Performance Benchmarks<a href="#performance-benchmarks" class="hash-link" aria-label="Direct link to Performance Benchmarks" title="Direct link to Performance Benchmarks" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Page Load</strong>: &lt; 2 seconds</li>
+<li class=""><strong>Transaction Processing</strong>: &lt; 1 second</li>
+<li class=""><strong>Report Generation</strong>: &lt; 5 seconds (for standard reports)</li>
+<li class=""><strong>API Response</strong>: &lt; 500ms</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="success-criteria">Success Criteria<a href="#success-criteria" class="hash-link" aria-label="Direct link to Success Criteria" title="Direct link to Success Criteria" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Pass Rate</strong>: 95%+ of all tests passing</li>
+<li class=""><strong>Bug Severity</strong>: No critical bugs in production</li>
+<li class=""><strong>User Satisfaction</strong>: &gt; 90% positive feedback</li>
+<li class=""><strong>System Uptime</strong>: 99.5%+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-bug-reporting">🐛 Bug Reporting<a href="#-bug-reporting" class="hash-link" aria-label="Direct link to 🐛 Bug Reporting" title="Direct link to 🐛 Bug Reporting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-you-find-a-bug">When You Find a Bug<a href="#when-you-find-a-bug" class="hash-link" aria-label="Direct link to When You Find a Bug" title="Direct link to When You Find a Bug" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Check if it&#x27;s already reported</strong></p>
+</li>
+<li class="">
+<p><strong>Reproduce the bug</strong> - Can you make it happen again?</p>
+</li>
+<li class="">
+<p><strong>Document the bug</strong>:</p>
+<ul>
+<li class="">What you were trying to do</li>
+<li class="">What you expected to happen</li>
+<li class="">What actually happened</li>
+<li class="">Steps to reproduce</li>
+<li class="">Screenshots/videos</li>
+<li class="">Environment (browser, OS, etc.)</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Assign priority</strong>:</p>
+<ul>
+<li class=""><strong>Critical</strong>: System down or data loss</li>
+<li class=""><strong>High</strong>: Major feature broken</li>
+<li class=""><strong>Medium</strong>: Feature works but has issues</li>
+<li class=""><strong>Low</strong>: Cosmetic or minor issues</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Report to appropriate channel</strong></p>
+<ul>
+<li class="">Use issue tracking system</li>
+<li class="">Notify team lead for critical bugs</li>
+<li class="">Include all documentation</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-security-testing">🔒 Security Testing<a href="#-security-testing" class="hash-link" aria-label="Direct link to 🔒 Security Testing" title="Direct link to 🔒 Security Testing" translate="no">​</a></h2>
+<p>Security testing ensures MarzPOS is protected against threats:</p>
+<ul>
+<li class=""><strong>Authentication Testing</strong>: Login security, password policies</li>
+<li class=""><strong>Authorization Testing</strong>: Proper access controls</li>
+<li class=""><strong>Input Validation</strong>: SQL injection, XSS prevention</li>
+<li class=""><strong>Data Protection</strong>: Encryption, secure storage</li>
+<li class=""><strong>API Security</strong>: Authentication, rate limiting</li>
+<li class=""><strong>File Upload Security</strong>: Malware scanning, type validation</li>
+</ul>
+<p>See: <a class="" href="/marzpos/security/malware-report">Security Documentation</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-test-documentation-standards">📝 Test Documentation Standards<a href="#-test-documentation-standards" class="hash-link" aria-label="Direct link to 📝 Test Documentation Standards" title="Direct link to 📝 Test Documentation Standards" translate="no">​</a></h2>
+<p>Each test should include:</p>
+<ul>
+<li class=""><strong>Test ID</strong>: Unique identifier</li>
+<li class=""><strong>Test Name</strong>: Descriptive name</li>
+<li class=""><strong>Module</strong>: Which module is being tested</li>
+<li class=""><strong>Prerequisites</strong>: What needs to be set up first</li>
+<li class=""><strong>Test Steps</strong>: Step-by-step instructions</li>
+<li class=""><strong>Expected Results</strong>: What should happen</li>
+<li class=""><strong>Actual Results</strong>: What did happen</li>
+<li class=""><strong>Status</strong>: Pass/Fail/Blocked</li>
+<li class=""><strong>Notes</strong>: Any additional information</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-continuous-integrationdeployment">🚀 Continuous Integration/Deployment<a href="#-continuous-integrationdeployment" class="hash-link" aria-label="Direct link to 🚀 Continuous Integration/Deployment" title="Direct link to 🚀 Continuous Integration/Deployment" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cicd-pipeline">CI/CD Pipeline<a href="#cicd-pipeline" class="hash-link" aria-label="Direct link to CI/CD Pipeline" title="Direct link to CI/CD Pipeline" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Code Commit → Run Tests → Build → Deploy to Test → Manual Approval → Deploy to Production</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="automated-checks">Automated Checks<a href="#automated-checks" class="hash-link" aria-label="Direct link to Automated Checks" title="Direct link to Automated Checks" translate="no">​</a></h3>
+<ul>
+<li class="">✅ All unit tests pass</li>
+<li class="">✅ Code style standards met</li>
+<li class="">✅ No security vulnerabilities detected</li>
+<li class="">✅ Test coverage meets threshold</li>
+<li class="">✅ Integration tests pass</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="deployment-gates">Deployment Gates<a href="#deployment-gates" class="hash-link" aria-label="Direct link to Deployment Gates" title="Direct link to Deployment Gates" translate="no">​</a></h3>
+<ul>
+<li class="">All tests must pass</li>
+<li class="">Code review approved</li>
+<li class="">No critical bugs open</li>
+<li class="">Documentation updated</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-testing-support">📞 Testing Support<a href="#-testing-support" class="hash-link" aria-label="Direct link to 📞 Testing Support" title="Direct link to 📞 Testing Support" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="questions-or-issues">Questions or Issues?<a href="#questions-or-issues" class="hash-link" aria-label="Direct link to Questions or Issues?" title="Direct link to Questions or Issues?" translate="no">​</a></h3>
+<p><strong>For Testing Help:</strong></p>
+<ul>
+<li class="">Contact QA Lead: <a href="mailto:qa@softa.com" target="_blank" rel="noopener noreferrer" class="">qa@softa.com</a></li>
+<li class="">Testing Slack Channel: #marzpos-testing</li>
+<li class="">Review <a class="" href="/marzpos/docs/testing-guidelines">Testing Guidelines</a></li>
+</ul>
+<p><strong>For Test Environment Access:</strong></p>
+<ul>
+<li class="">Request credentials from system administrator</li>
+<li class="">See <a href="#test-environment-setup" class="">Test Environment Setup</a></li>
+</ul>
+<p><strong>For Bug Reports:</strong></p>
+<ul>
+<li class="">Use issue tracking system</li>
+<li class="">Follow <a href="#bug-reporting" class="">Bug Reporting</a> guidelines</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-testing-schedule">📅 Testing Schedule<a href="#-testing-schedule" class="hash-link" aria-label="Direct link to 📅 Testing Schedule" title="Direct link to 📅 Testing Schedule" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="daily">Daily<a href="#daily" class="hash-link" aria-label="Direct link to Daily" title="Direct link to Daily" translate="no">​</a></h3>
+<ul>
+<li class="">Automated unit tests on every commit</li>
+<li class="">Smoke tests on test environment</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="weekly">Weekly<a href="#weekly" class="hash-link" aria-label="Direct link to Weekly" title="Direct link to Weekly" translate="no">​</a></h3>
+<ul>
+<li class="">Full regression test suite</li>
+<li class="">Performance testing</li>
+<li class="">Security scans</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="monthly">Monthly<a href="#monthly" class="hash-link" aria-label="Direct link to Monthly" title="Direct link to Monthly" translate="no">​</a></h3>
+<ul>
+<li class="">Complete UAT cycle</li>
+<li class="">Test data refresh</li>
+<li class="">Test documentation review</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="quarterly">Quarterly<a href="#quarterly" class="hash-link" aria-label="Direct link to Quarterly" title="Direct link to Quarterly" translate="no">​</a></h3>
+<ul>
+<li class="">Comprehensive security audit</li>
+<li class="">Load testing</li>
+<li class="">Disaster recovery testing</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-training-and-resources">🎓 Training and Resources<a href="#-training-and-resources" class="hash-link" aria-label="Direct link to 🎓 Training and Resources" title="Direct link to 🎓 Training and Resources" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-new-testers">For New Testers<a href="#for-new-testers" class="hash-link" aria-label="Direct link to For New Testers" title="Direct link to For New Testers" translate="no">​</a></h3>
+<ol>
+<li class="">Review this testing documentation</li>
+<li class="">Set up test environment access</li>
+<li class="">Shadow experienced tester</li>
+<li class="">Start with simple test cases</li>
+<li class="">Gradually take on more complex testing</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="resources">Resources<a href="#resources" class="hash-link" aria-label="Direct link to Resources" title="Direct link to Resources" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="/marzpos/docs/testing-guidelines">Testing Guidelines</a></li>
+<li class=""><a class="" href="/marzpos/docs/unit-testing">Unit Testing Guide</a></li>
+<li class=""><a class="" href="/marzpos/docs/integration-testing">Integration Testing Guide</a></li>
+<li class="">Test case templates (available on request)</li>
+<li class="">Video tutorials (coming soon)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-testing-dashboard">📊 Testing Dashboard<a href="#-testing-dashboard" class="hash-link" aria-label="Direct link to 📊 Testing Dashboard" title="Direct link to 📊 Testing Dashboard" translate="no">​</a></h2>
+<p>Track our testing metrics:</p>
+<ul>
+<li class="">Current test coverage: <strong>Target 80%+</strong></li>
+<li class="">Tests passing: <strong>Target 95%+</strong></li>
+<li class="">Open bugs by severity</li>
+<li class="">Test execution trends</li>
+<li class="">Performance benchmarks</li>
+</ul>
+<hr>
+<p><strong>Document Owner</strong>: SOFTA QA Team<br>
+<strong>Last Updated</strong>: January 2026<br>
+<strong>Next Review</strong>: April 2026</p>
+<p><strong>Questions?</strong> Contact the QA team or refer to specific testing guides in this section.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/tino-ryan/marzpos/tree/main/docs/testing/index.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/marzpos/docs/intro"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Welcome to MarzPOS Documentation</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/marzpos/docs/category/tutorial---basics"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Tutorial - Basics</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#-overview" class="table-of-contents__link toc-highlight">📋 Overview</a></li><li><a href="#-testing-philosophy" class="table-of-contents__link toc-highlight">🎯 Testing Philosophy</a></li><li><a href="#-testing-documentation" class="table-of-contents__link toc-highlight">📚 Testing Documentation</a><ul><li><a href="#testing-fundamentals" class="table-of-contents__link toc-highlight">Testing Fundamentals</a></li><li><a href="#testing-types" class="table-of-contents__link toc-highlight">Testing Types</a></li><li><a href="#feature-testing" class="table-of-contents__link toc-highlight">Feature Testing</a></li><li><a href="#quality-metrics" class="table-of-contents__link toc-highlight">Quality Metrics</a></li></ul></li><li><a href="#-testing-overview" class="table-of-contents__link toc-highlight">🧪 Testing Overview</a><ul><li><a href="#what-we-test" class="table-of-contents__link toc-highlight">What We Test</a></li></ul></li><li><a href="#️-test-environment-setup" class="table-of-contents__link toc-highlight">🏗️ Test Environment Setup</a><ul><li><a href="#production-environment" class="table-of-contents__link toc-highlight">Production Environment</a></li><li><a href="#test-environment" class="table-of-contents__link toc-highlight">Test Environment</a></li><li><a href="#local-development" class="table-of-contents__link toc-highlight">Local Development</a></li><li><a href="#environment-comparison" class="table-of-contents__link toc-highlight">Environment Comparison</a></li></ul></li><li><a href="#-testing-workflow" class="table-of-contents__link toc-highlight">🔄 Testing Workflow</a><ul><li><a href="#1-pre-development" class="table-of-contents__link toc-highlight">1. Pre-Development</a></li><li><a href="#2-during-development" class="table-of-contents__link toc-highlight">2. During Development</a></li><li><a href="#3-post-development" class="table-of-contents__link toc-highlight">3. Post-Development</a></li><li><a href="#4-pre-release" class="table-of-contents__link toc-highlight">4. Pre-Release</a></li><li><a href="#5-post-release" class="table-of-contents__link toc-highlight">5. Post-Release</a></li></ul></li><li><a href="#-test-types-explained" class="table-of-contents__link toc-highlight">📊 Test Types Explained</a><ul><li><a href="#unit-testing" class="table-of-contents__link toc-highlight">Unit Testing</a></li><li><a href="#integration-testing" class="table-of-contents__link toc-highlight">Integration Testing</a></li><li><a href="#system-testing" class="table-of-contents__link toc-highlight">System Testing</a></li><li><a href="#user-acceptance-testing-uat" class="table-of-contents__link toc-highlight">User Acceptance Testing (UAT)</a></li></ul></li><li><a href="#-feature-testing-coverage" class="table-of-contents__link toc-highlight">🎯 Feature Testing Coverage</a><ul><li><a href="#pos-system-testing" class="table-of-contents__link toc-highlight">POS System Testing</a></li><li><a href="#inventory-testing" class="table-of-contents__link toc-highlight">Inventory Testing</a></li><li><a href="#customer-management-testing" class="table-of-contents__link toc-highlight">Customer Management Testing</a></li><li><a href="#woocommerce-integration-testing" class="table-of-contents__link toc-highlight">WooCommerce Integration Testing</a></li><li><a href="#accounting-testing" class="table-of-contents__link toc-highlight">Accounting Testing</a></li><li><a href="#hrm-testing" class="table-of-contents__link toc-highlight">HRM Testing</a></li><li><a href="#reporting-testing" class="table-of-contents__link toc-highlight">Reporting Testing</a></li></ul></li><li><a href="#-quality-metrics" class="table-of-contents__link toc-highlight">📈 Quality Metrics</a><ul><li><a href="#test-coverage-goals" class="table-of-contents__link toc-highlight">Test Coverage Goals</a></li><li><a href="#performance-benchmarks" class="table-of-contents__link toc-highlight">Performance Benchmarks</a></li><li><a href="#success-criteria" class="table-of-contents__link toc-highlight">Success Criteria</a></li></ul></li><li><a href="#-bug-reporting" class="table-of-contents__link toc-highlight">🐛 Bug Reporting</a><ul><li><a href="#when-you-find-a-bug" class="table-of-contents__link toc-highlight">When You Find a Bug</a></li></ul></li><li><a href="#-security-testing" class="table-of-contents__link toc-highlight">🔒 Security Testing</a></li><li><a href="#-test-documentation-standards" class="table-of-contents__link toc-highlight">📝 Test Documentation Standards</a></li><li><a href="#-continuous-integrationdeployment" class="table-of-contents__link toc-highlight">🚀 Continuous Integration/Deployment</a><ul><li><a href="#cicd-pipeline" class="table-of-contents__link toc-highlight">CI/CD Pipeline</a></li><li><a href="#automated-checks" class="table-of-contents__link toc-highlight">Automated Checks</a></li><li><a href="#deployment-gates" class="table-of-contents__link toc-highlight">Deployment Gates</a></li></ul></li><li><a href="#-testing-support" class="table-of-contents__link toc-highlight">📞 Testing Support</a><ul><li><a href="#questions-or-issues" class="table-of-contents__link toc-highlight">Questions or Issues?</a></li></ul></li><li><a href="#-testing-schedule" class="table-of-contents__link toc-highlight">📅 Testing Schedule</a><ul><li><a href="#daily" class="table-of-contents__link toc-highlight">Daily</a></li><li><a href="#weekly" class="table-of-contents__link toc-highlight">Weekly</a></li><li><a href="#monthly" class="table-of-contents__link toc-highlight">Monthly</a></li><li><a href="#quarterly" class="table-of-contents__link toc-highlight">Quarterly</a></li></ul></li><li><a href="#-training-and-resources" class="table-of-contents__link toc-highlight">🎓 Training and Resources</a><ul><li><a href="#for-new-testers" class="table-of-contents__link toc-highlight">For New Testers</a></li><li><a href="#resources" class="table-of-contents__link toc-highlight">Resources</a></li></ul></li><li><a href="#-testing-dashboard" class="table-of-contents__link toc-highlight">📊 Testing Dashboard</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/marzpos/docs/intro">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/marzpos/docs/sops">Standard Operating Procedures</a></li><li class="footer__item"><a class="footer__link-item" href="/marzpos/docs/modules/pos-system">Modules</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">System</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://marzpos.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Production Site<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://marztest.marzpos.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Test Environment<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.vapegarage.co.za/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Vape Garage Store<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/tino-ryan/marzpos" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/tino-ryan/marzpos/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">Report Issue<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 SOFTA - Tinotenda Gozho & Mckale. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
