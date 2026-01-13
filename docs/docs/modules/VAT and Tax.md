@@ -1,13 +1,17 @@
-#  VAT and Tax Configuration Documentation
+# VAT and Tax Configuration Documentation
 
 **Module:** UltimatePOS (Core Tax Features)  
 **Reference:** Based on official Ultimate Fosters documentation  
-**Date:** January 06, 2026  
-**Official Documentation Links:**  
-- [Tax Settings Overview](https://ultimatefosters.com/docs/ultimatepos/tax-settings/)  
-- [Tax Rates, Tax Groups & Disabling Tax](https://ultimatefosters.com/docs/ultimatepos/tax-settings/tax-rates-tax-groups/)  
-- [Inline Tax & Invoice Tax](https://ultimatefosters.com/docs/ultimatepos/tax-settings/inline-tax-invoice-tax/)  
-- [Business Settings (Tax Options)](https://ultimatefosters.com/docs/ultimatepos/settings/business-settings/)
+**Last Updated:** January 13, 2026  
+**Prepared by:** Tinotenda Gozho  
+
+**Recent Major Updates (13 January 2026):**  
+- Fixed missing / incorrect total tax display on invoices  
+- Ensured proper Tax Summary Label usage  
+- Documented item addition with tax examples  
+- Clarified discount → VAT calculation order  
+- Added refund tax reversal notes  
+- Verified inline tax and invoice layout settings
 
 ## Table of Contents
 
@@ -20,6 +24,10 @@
 - [Inline Tax in Purchases and Sales](#inline-tax-in-purchases-and-sales)
 - [Handling VAT-Registered vs Non-VAT-Registered Suppliers](#handling-vat-registered-vs-non-vat-registered-suppliers)
 - [Tax Display and Reporting](#tax-display-and-reporting)
+- [Recent Fixes & Enhancements (January 2026)](#recent-fixes)
+- [Adding Items/Products with Tax (Updated Process)](#adding-items-with-tax)
+- [Discounts and VAT Treatment](#discounts-vat)
+- [Refund Process – Tax Reversal](#refund-tax)
 - [Best Practices for VAT Compliance](#best-practices-for-vat-compliance)
 
 ## Overview
@@ -97,7 +105,7 @@ When adding/editing a product (**Products > Add/Edit**):
 Inline tax shows tax per product line (instead of total only).
 
 **Enable:**
-- **Business Settings > Tax > Enable Inline Tax in purchase and sell**
+- **Business Settings > Tax > Enable inline tax in purchase and sell**
 
 **Display on Invoice:**
 - Use "Detailed Invoice" layout
@@ -133,6 +141,86 @@ UltimatePOS does not have a direct "VAT Registered" flag on suppliers, but you c
   - Tax Report: Details input tax, output tax, expense tax
   - Sales/Purchase reports include tax breakdowns
 
+## Recent Fixes & Enhancements (January 2026)
+<a id="recent-fixes"></a>
+
+**Updated: January 13, 2026**
+
+- Fixed issue where total tax amount was not displaying correctly (or at all) on generated invoices/PDFs/prints.
+- **Solution:** Ensured **"Tax Summary Label"** is set in the active **Invoice Layout** (Settings → Invoice Settings → Invoice Layout → Edit).
+  - Enter a clear label, e.g., "Total VAT" or "VAT Payable @ 15%".
+  - This adds a dedicated summary line at the bottom showing aggregated tax (after discounts).
+  - Recommended layouts: **Detailed** (full breakdown), **Slim/Slim 2** (thermal printers).
+- Verified **Inline Tax**:
+  - Enabled via **Business Settings > Tax > Enable inline tax in purchase and sell**.
+  - Requires **Detailed** layout + **Tax label** enabled.
+- Default sale tax remains **None** in **Business Settings > Sales** — taxes controlled per product.
+
+**Test after changes:** Create test sale → View invoice (screen/PDF/print) → Confirm total tax appears clearly.
+
+## Adding Items/Products with Tax (Updated Process)
+<a id="adding-items-with-tax"></a>
+
+**Updated: January 13, 2026**
+
+When creating/editing products (**Products → Add/Edit**):
+
+1. Select correct **Applicable Tax** from dropdown:
+   - Most products (vapes, disposables, e.g., Bolt series): **Standard Rate - 15%**
+   - Zero-rated/exempt/special: Use **0%** rate (e.g., "VAT Exempt @ 0%") or "No Tax"
+2. Set **Selling Price Tax Type**: Usually **Inclusive** for retail.
+   - Real example (Bolt 1.8k Cream caramel 20mg – SKU 0038):
+     - Applicable Tax: **Standard Rate - 15%**
+     - Selling Price Tax Type: **Inclusive**
+     - Default Selling Price (Inc. tax): R160.00
+     - Auto-calculated: Exc. tax ≈ R139.13 + VAT ≈ R20.87
+3. After saving, test immediately:
+   - Add to POS/sale
+   - Generate invoice → Verify 15% shows inline and in total summary
+
+**Special Items Handling**
+- Always assign explicit tax rate (prefer named 0% over blank "None" for audit clarity).
+- Override per transaction possible in POS (click line item → change tax), but use correct defaults.
+
+## Discounts and VAT Treatment
+<a id="discounts-vat"></a>
+
+**Updated: January 13, 2026**
+
+- Discounts apply **before** VAT (on pre-tax subtotal).
+- Verified behavior:
+  1. Line price (exc. tax) reduced by discount.
+  2. VAT calculated on **discounted amount**.
+  3. Final = discounted price + VAT on discounted price.
+- Example:
+  - Item R160 inc. VAT (exc. ≈ R139.13)
+  - 10% discount → discounted exc. = R125.22
+  - VAT on discounted = R18.78
+  - Final payable = R144.00
+- Correctly shown:
+  - Inline tax reduced per line
+  - Total tax summary reflects aggregate reduced VAT
+
+See [SOPs/Sales.md] for applying discounts.
+
+## Refund Process – Tax Reversal
+<a id="refund-tax"></a>
+
+**Documented & Tested: January 13, 2026**
+
+- Sell returns automatically reverse original tax logic.
+- VAT originally charged is credited (based on discounted amount if discount applied).
+- Steps:
+  1. **Sell → Sell Return** or from POS
+  2. Select invoice → Return items
+  3. Tax reversed identically to original
+- Impact:
+  - Reduces output VAT
+  - Visible in **Tax Report**
+- Print refund note/invoice — tax credit under summary label.
+
+See [SOPs/POS and payment processing.md] for full refund procedure.
+
 ## Best Practices for VAT Compliance
 <a id="best-practices-for-vat-compliance"></a>
 
@@ -143,7 +231,10 @@ UltimatePOS does not have a direct "VAT Registered" flag on suppliers, but you c
 - Use Tax Groups for complex VAT structures.
 - Test invoices to ensure correct tax display (inclusive/exclusive as needed).
 
-**PREPARED BY:** Tinotenda Gozho  
-**DATE:** 05/01/2026
-
 **For official updates:** Visit [Ultimate Fosters Documentation](https://ultimatefosters.com/docs/ultimatepos/)
+
+**Official Documentation Links:**  
+- [Tax Settings Overview](https://ultimatefosters.com/docs/ultimatepos/tax-settings/)  
+- [Tax Rates, Tax Groups & Disabling Tax](https://ultimatefosters.com/docs/ultimatepos/tax-settings/tax-rates-tax-groups/)  
+- [Inline Tax & Invoice Tax](https://ultimatefosters.com/docs/ultimatepos/tax-settings/inline-tax-invoice-tax/)  
+- [Business Settings (Tax Options)](https://ultimatefosters.com/docs/ultimatepos/settings/business-settings/)

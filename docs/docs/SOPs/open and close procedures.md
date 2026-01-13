@@ -3,393 +3,230 @@ sidebar_position: 1
 ---
 
 # Store Opening and Closing Procedures
-**SOP Codes:** SOP-OPEN-001 and SOP-CLOSE-001
-**Version:** 1.0  
-**Last update:** 05 January 2026  
-**Next Review:** TBA
-**Prepared by:** Tinotenda Gozho
+**SOP Codes:** SOP-OPEN-001 and SOP-CLOSE-001  
+**Version:** 1.1  
+**Last update:** January 13, 2026  
+**Next Review:** TBA 
+**Prepared by:** Tinotenda Gozho  
+**Updated for:** UltimatePOS V6.10 (new system verified Jan 2026)
 
 ## Quick Navigation
 
 - [Store Opening Procedures (SOP-OPEN-001)](#store-opening-procedures)
 - [Store Closing Procedures (SOP-CLOSE-001)](#store-closing-procedures)
+- [Shift Overlap & Shared Register](#shift-overlap-shared-register)
 
 ---
 
 ## Store Opening Procedures
 
 **SOP CODE:** SOP-OPEN-001  
-**VERSION:** 1.0  
+**VERSION:** 1.1  
 
 ### 1. PURPOSE
 
-To ensure the store is safely opened, prepared for trading, and ready to provide a clean, professional, and welcoming environment for customers. This procedure minimises security risks, maintains hygiene standards, and confirms all systems are operational before sales begin.
-
----
+To safely open the store, prepare for trading, verify systems (including UltimatePOS register), and ensure a clean, professional environment. Minimises risks and confirms operational readiness.
 
 ### 2. SCOPE
 
-**WHO:** Opening Staff Member (Cashier or Manager)  
-**WHEN:** At store opening time each trading day  
-**WHERE:** Entire store premises (entrance, sales floor, counter, office)
-
----
+**WHO:** Opening Staff (Cashier A – Morning Shift)  
+**WHEN:** At store opening (10:00 AM)  
+**WHERE:** Premises + POS counter
 
 ### 3. RESPONSIBILITY
 
-| ROLE              | RESPONSIBILITY                                                                 |
-|-------------------|--------------------------------------------------------------------------------|
-| Opening Staff     | Perform all opening tasks in sequence, report any issues immediately          |
-| Store Manager     | Verify completion if present; address any problems reported                   |
-| Store Owner       | Escalate major issues (e.g., alarm faults, system failures)                    |
-
----
+| ROLE            | RESPONSIBILITY                                      |
+|-----------------|-----------------------------------------------------|
+| Opening Cashier | Execute all steps, report issues                    |
+| Store Manager   | Verify if present; resolve problems                 |
+| Store Owner     | Handle major escalations (alarm/POS faults)         |
 
 ### 4. DEFINITIONS
 
-**Float:** Fixed amount of cash ($180) kept in the till for providing change at the start of the day.
-
----
+**Float:** Fixed R180.00 cash kept in drawer for change.
 
 ### 5. REQUIRED TOOLS / SYSTEMS
 
-- Store keys and alarm code
-- Ultimate POS system and computer
-- Card payment terminal (EFTPOS machine)
+- Keys & alarm code
+- UltimatePOS system
+- Card terminal
 - Printer
-- Marketing/display screen
-- Cleaning supplies (mop, cleaner, cloths)
-
----
+- Cleaning supplies
 
 ### 6. PROCEDURE (Step-by-Step)
 
-#### STEP 1: Enter and Secure Premises
+#### STEP 1: Enter & Secure Premises
+- Disarm alarm, open roller door fully.
+- **Critical:** Alarm fault → stop & contact Manager/Owner immediately.
 
-**ACTION:** Disarm alarm and open roller door.
-
-**DETAIL:**
-- Enter using designated key.
-- Immediately disarm alarm using correct code.
-- Open roller door fully to allow customer access.
-
-**SYSTEM:** N/A
-
-**⚠️ CRITICAL:** If alarm fails to disarm or shows fault, do not proceed – contact Manager/Owner immediately.
-
----
-
-#### STEP 2: Clean and Prepare Sales Area
-
-**ACTION:** Clean counter and mop floor.
-
-**DETAIL:**
-- Wipe down counter, shelves, and display areas.
-- Mop floor ensuring no wet spots remain that could cause slips.
-- Empty bins if needed from previous day.
-
-**SYSTEM:** N/A
-
-**⚠️ CRITICAL:** Store must present as clean and professional at all times – customers judge hygiene highly in vape retail.
-
----
+#### STEP 2: Clean & Prepare Area
+- Wipe counter/shelves/displays.
+- Mop floor (no wet spots).
+- Empty bins if needed.
 
 #### STEP 3: Power On Equipment
+- Turn on computer, monitor, printer, marketing screen.
+- Confirm promotions display.
 
-**ACTION:** Switch on all necessary devices.
+#### STEP 4: Log In & Open Register (UltimatePOS)
+1. Log in with personal username/password.
+2. Go to **POS** from main menu.
+3. Enter **R 180.00** in "Cash in Hand" field (opening float).
+4. Click **Open Register** button.
 
-**DETAIL:**
-- Turn on printer, computer/monitor, and marketing screen.
-- Ensure marketing screen is displaying current promotions.
 
-**SYSTEM:** N/A
+**Critical:** If float ≠ R180, note actual amount & inform management before proceeding.
 
-**⚠️ CRITICAL:** Report any device that fails to power on.
-
----
-
-#### STEP 4: System and Payment Checks
-
-**ACTION:** Log in to POS, check company phone, and power on card machine.
-
-**DETAIL:**
-- Check company phone for urgent messages.
-- Log in to Ultimate POS and verify system is functioning (run a test transaction if needed).
-- Switch on card machine and confirm connection.
-
-**SYSTEM:** Ultimate POS: Login → Dashboard check
-
-**⚠️ CRITICAL:** Do not open for trading if POS or card machine is offline – contact Manager immediately.
-
----
-
-#### STEP 5: Verify Till Float
-
-**ACTION:** Confirm float of $180 is present in till.
-
-**DETAIL:**
-- Count and verify the standard float amount.
-- Report any discrepancy immediately.
-
-**SYSTEM:** N/A
-
-**⚠️ CRITICAL:** Float must always be exactly $180 at opening. Any shortage must be documented and investigated.
-
----
+#### STEP 5: Final Checks
+- Check company phone for messages.
+- Power on card machine & confirm connection.
+- Run quick test (optional) to verify POS/printer.
 
 ### ✓ COMPLETION CHECKLIST
 
-- [ ] Alarm disarmed correctly
-- [ ] Roller door fully open
-- [ ] Counter cleaned and floor mopped
-- [ ] All devices (printer, monitor, marketing screen) powered on
-- [ ] Company phone checked
-- [ ] Ultimate POS logged in and operational
-- [ ] Card machine powered on and connected
-- [ ] Till float verified at $180
+- [ ] Alarm disarmed & roller door open
+- [ ] Area cleaned & mopped
+- [ ] Devices powered on
+- [ ] Personal login completed
+- [ ] Register opened in UltimatePOS (R180 entered)
+- [ ] Card machine connected
+- [ ] Float verified (R180 or noted discrepancy)
 
----
+### 7. EXCEPTIONS / TROUBLESHOOTING
 
-### 7. EXCEPTIONS / WHAT IF SOMETHING GOES WRONG
-
-| WHAT IF...                     | THEN...                                                                                                                                    |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| Alarm fails or shows fault     | **Solution:** (1) Do not enter further (2) Contact Manager/Owner and police if needed. **Escalate to:** Store Owner immediately            |
-| POS or card machine not working| **Solution:** (1) Attempt restart (2) Use backup method if available. **Escalate to:** Store Manager                                       |
-| Float missing or incorrect     | **Solution:** (1) Check safe/records from previous close (2) Document and report. **Escalate to:** Store Manager/Owner                     |
-
----
+| ISSUE                          | ACTION                                                                 |
+|--------------------------------|------------------------------------------------------------------------|
+| Alarm fault                    | Do not enter; contact Manager/Owner/police if needed                   |
+| Previous register still open   | Cannot open new → contact Manager to close prior session               |
+| POS/card offline               | Restart; use backup if available; escalate to Manager                  |
+| Float incorrect                | Document actual, inform management; do not proceed without note        |
 
 ### 8. COMPLIANCE & RULES
 
-#### 🔒 LEGAL REQUIREMENTS
-- Compliance with occupational health and safety (clean floors to prevent slips).
-- Secure handling of age-restricted products during setup.
-
-#### 🔒 COMPANY POLICIES
-- Store must be fully ready before allowing customer entry.
-- All systems must be verified operational.
-
-#### ⛔ PROHIBITED ACTIONS
-- Opening without disarming alarm correctly.
-- Trading without functional POS or card machine.
-- Leaving float unsecured.
-
-#### ⚠️ CONSEQUENCES OF NON-COMPLIANCE
-- Security breach or theft risk.
-- Lost sales due to downtime.
-- Disciplinary action for negligence.
+- Maintain hygiene & security.
+- Never open register without personal login.
+- Prohibited: Trading before register open.
 
 ---
 
-### 9. RECORDS & REPORTS
+## Shift Overlap & Shared Register
 
-#### RECORDS TO COMPLETE
-- **Opening Checklist** (optional daily log) - *When:* Daily - *Stored:* Digital/Physical folder
-
-#### REPORTS TO GENERATE
-- None required routinely
-
-#### RETENTION PERIOD
-- **Checklists:** 1 year
-
----
-
-### 10. REVIEW & APPROVAL
-
-| VERSION | DATE       | CHANGES            | APPROVED BY |
-|---------|------------|--------------------|-------------|
-| 1.0     | 06/01/2026 | Initial creation   | [Owner Name] |
-
-**NEXT REVIEW DATE:** 06/01/2027
+**Morning (Cashier A) opens register at 10:00.**  
+**Cashier B arrives 11:30 → logs in but uses A's open register.**  
+**All sales log to A's session until close.**  
+**Cashier A leaves 18:30 → B continues on same open register.**  
+**Both share responsibility for drawer accuracy during 11:30–18:30.**  
+**Do NOT open second register during overlap.**
 
 ---
 
 ## Store Closing Procedures
 
 **SOP CODE:** SOP-CLOSE-001  
-**VERSION:** 1.0  
+**VERSION:** 1.1  
 
 ### 1. PURPOSE
 
-To securely close the store, reconcile daily takings, protect cash and stock, ensure premises are safe and secure overnight, and prepare accurate records for management review.
-
----
+Securely close store, reconcile takings via UltimatePOS, protect cash/stock, and prepare accurate records.
 
 ### 2. SCOPE
 
-**WHO:** Closing Staff Member (Cashier or Manager)  
-**WHEN:** At store closing time each trading day  
-**WHERE:** Entire store premises (sales floor, counter, office, entrance)
-
----
+**WHO:** Closing Staff (Cashier B – Evening Shift)  
+**WHEN:** At closing (20:00)  
+**WHERE:** Premises + POS
 
 ### 3. RESPONSIBILITY
 
-| ROLE              | RESPONSIBILITY                                                                 |
-|-------------------|--------------------------------------------------------------------------------|
-| Closing Staff     | Perform all closing tasks in sequence, complete cash-up accurately            |
-| Store Manager     | Verify cash-up if present; review end-of-day reports                          |
-| Store Owner       | Escalate discrepancies or security issues                                     |
+| ROLE            | RESPONSIBILITY                                      |
+|-----------------|-----------------------------------------------------|
+| Closing Cashier | Complete cash-up, document discrepancies            |
+| Store Manager   | Verify reports if present                           |
+| Store Owner     | Escalate shortages/security issues                  |
 
----
-
-### 5. REQUIRED TOOLS / SYSTEMS
-
-- Ultimate POS system
-- Cash safe or secure storage
-- Store keys and alarm code
-- End-of-day reporting function in POS
-
----
-
-### 6. PROCEDURE (Step-by-Step)
+### 4. PROCEDURE (Step-by-Step)
 
 #### STEP 1: Prepare for Close
+- Inform customers of closing.
+- Shut & lock roller door (no customers inside).
 
-**ACTION:** Close roller door and clear store of customers.
-
-**DETAIL:**
-- Politely inform remaining customers of closing time.
-- Fully shut and lock roller door.
-
-**SYSTEM:** N/A
-
-**⚠️ CRITICAL:** Ensure no customers remain inside before proceeding.
-
----
-
-#### STEP 2: Complete End-of-Day and Cash-Up
-
-**ACTION:** Run end-of-day procedure and reconcile cash.
-
-**DETAIL:**
+#### STEP 2: Finalise Sales & Start Close
 - Complete all transactions.
-- Count cash and compare to POS reports.
-- Follow separate POS Payment and Transactions SOP for detailed cash-up.
+- Click red **Close Register** button → shows daily summary.
 
-**SYSTEM:** In Ultimate POS: Reports → End of Day / Cash Up function
+#### STEP 3: Count & Enter Closing Amounts
+1. Count all physical cash in drawer (separate float).
+2. Count **number** of card payment slips (not rand value).
+3. Enter fields:
 
-**⚠️ CRITICAL:** Any cash discrepancy must be documented immediately.
+   | Field              | What to Enter                  | Example    |
+   |--------------------|--------------------------------|------------|
+   | Total Cash         | Rand amount of all cash        | R 828.00   |
+   | Total Card Slips   | **Count** of card slips        | 15         |
+   | Total Cheques      | Usually 0 (unless cheques)     | 0          |
 
----
+4. Add **Closing Note** if needed (e.g., "Short R10 – dispute", "Busy day", "Card offline 2-3 PM").
 
-#### STEP 3: Secure Cash and Empty Bins
+5. Submit → System compares Expected vs Actual.
 
-**ACTION:** Place float back in till and secure excess cash.
+#### STEP 4: Reconcile & Verify
+- **Balanced:** Proceed.
+- **Over/Short:** Recount, check missed transactions, document in note.
+- Quick VAT/tax check: Review daily sales report → confirm tax totals match invoices (cross-ref VAT and Tax.md).
+- Print End-of-Day report if required.
 
-**DETAIL:**
-- Leave exactly $180 float in till for next day.
-- Place all remaining cash in safe/secure location.
-- Empty all bins and remove rubbish.
+#### STEP 5: Prepare Float & Secure
+- Count out R180 float for next day.
+- Secure excess cash in safe.
+- Empty bins.
 
-**SYSTEM:** N/A
-
-**⚠️ CRITICAL:** Never leave excess cash in till overnight.
-
----
-
-#### STEP 4: Power Down Equipment
-
-**ACTION:** Switch off and log out of all devices.
-
-**DETAIL:**
-- Log out of Ultimate POS.
-- Turn off computer, monitor, printer, marketing screen, lights, and any other devices.
-
-**SYSTEM:** Ultimate POS: Secure logout
-
-**⚠️ CRITICAL:** Ensure all systems are fully logged out to prevent unauthorised access.
-
----
-
-#### STEP 5: Secure Premises and Exit
-
-**ACTION:** Lock door, arm alarm, and confirm security.
-
-**DETAIL:**
-- Exit store and lock main door.
-- Arm alarm system.
-- Visually check roller door is secure.
-
-**SYSTEM:** N/A
-
-**⚠️ CRITICAL:** Test alarm activation (listen for beep/confirmation). If alarm fails, contact Manager/Owner immediately – do not leave premises unsecured.
-
----
+#### STEP 6: Power Down & Secure
+- Log out of UltimatePOS.
+- Power off devices.
+- Lock door, arm alarm (confirm activation beep).
 
 ### ✓ COMPLETION CHECKLIST
 
-- [ ] All customers exited and roller door shut/locked
-- [ ] End-of-day and cash-up completed accurately
-- [ ] $180 float left in till, excess cash secured
+- [ ] Customers exited, roller door locked
+- [ ] Close Register clicked & amounts entered (Cash, Card Slips, Cheques)
+- [ ] Reconciliation reviewed (balanced or noted)
+- [ ] R180 float prepared & excess secured
 - [ ] Bins emptied
-- [ ] All devices powered off and logged out
-- [ ] Door locked and alarm armed successfully
+- [ ] Devices logged out & powered off
+- [ ] Door locked & alarm armed
 
----
+### 7. EXCEPTIONS / TROUBLESHOOTING
 
-### 7. EXCEPTIONS / WHAT IF SOMETHING GOES WRONG
-
-| WHAT IF...                     | THEN...                                                                                                                                                  |
-|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cash discrepancy found         | **Solution:** (1) Recount cash (2) Review transactions (3) Document variance. **Escalate to:** Store Manager/Owner                                       |
-| Alarm fails to arm             | **Solution:** (1) Re-enter code (2) Contact alarm company if needed. **Escalate to:** Store Owner – do not leave unsecured                               |
-| POS end-of-day won't complete  | **Solution:** (1) Check for open transactions (2) Contact support if needed. **Escalate to:** Store Manager                                              |
-
----
+| ISSUE                     | ACTION                                                                 |
+|---------------------------|------------------------------------------------------------------------|
+| Cash short/over           | Recount, review transactions, note reason, escalate to Manager         |
+| Register won't close      | Check open transactions; contact support/Manager                       |
+| Alarm fails to arm        | Retry code; contact alarm company/Owner – do NOT leave unsecured       |
+| Discrepancy in card slips | Recount slips; check POS payment logs                                  |
 
 ### 8. COMPLIANCE & RULES
 
-#### 🔒 LEGAL REQUIREMENTS
-- Accurate financial records for tax purposes.
-- Secure storage of cash and age-restricted products overnight.
-
-#### 🔒 COMPANY POLICIES
-- Exact $180 float must be maintained.
-- End-of-day must be completed daily without exception.
-
-#### ⛔ PROHIBITED ACTIONS
-- Leaving excess cash in till.
-- Exiting without arming alarm.
-- Incomplete cash-up or unreported discrepancies.
-
-#### ⚠️ CONSEQUENCES OF NON-COMPLIANCE
-- Risk of theft or burglary.
-- Financial losses and audit issues.
-- Disciplinary action up to termination.
-
----
+- Accurate records for tax/VAT compliance.
+- Exact R180 float maintained.
+- Prohibited: Leaving excess cash in drawer, unreported discrepancies.
 
 ### 9. RECORDS & REPORTS
 
-#### RECORDS TO COMPLETE
-- **End-of-Day Report** - *When:* Daily - *Stored:* Ultimate POS
-- **Cash-Up Reconciliation** - *When:* Daily - *Stored:* Ultimate POS + Physical sign-off if required
-
-#### REPORTS TO GENERATE
-- **Daily Sales Report** - *Frequency:* Daily - *Recipient:* Manager/Owner
-
-#### RETENTION PERIOD
-- **Financial Records:** 7 years
-
----
+- **End-of-Day Report** & **Cash Register Close** – Stored in UltimatePOS (daily)
+- **Daily Sales Report** – Generate for Manager/Owner
+- **Retention:** Financial records 7 years
 
 ### 10. REVIEW & APPROVAL
 
-| VERSION | DATE       | CHANGES            | APPROVED BY |
-|---------|------------|--------------------|-------------|
-| 1.0     | 06/01/2026 | Initial creation   | [Owner Name] |
+| VERSION | DATE          | CHANGES                                      | APPROVED BY |
+|---------|---------------|----------------------------------------------|-------------|
+| 1.0     | 06/01/2026    | Initial creation                             | [Owner]     |
+| 1.1     | 13/01/2026    | Updated for UltimatePOS: register open/close, shared session, fields | Tinotenda Gozho |
 
-**NEXT REVIEW DATE:** 06/01/2027
+**NEXT REVIEW DATE:** January 13, 2027
 
----
+**Cross-references:**  
+- [VAT and Tax.md] → Tax verification during close  
+- [POS and payment processing.md] → Detailed refunds/payments
 
 **PREPARED BY:** Tinotenda Gozho  
-**DATE:** 06/01/2026
-
-**REVIEWED BY:** _____________________  
-**DATE:** ___________
-
-**APPROVED BY:** _____________________  
-**DATE:** ___________
+**DATE:** 13/01/2026

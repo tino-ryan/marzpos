@@ -1,8 +1,8 @@
 # POS and Payment Processing Procedures
 
 **SOP Codes:** SOP-POS-001 to SOP-POS-009  
-**Version:** 1.0  
-**last update:** 05 January 2026  
+**Version:** 1.1
+**last update:** January 13, 2026 
 **Next Review:** TBA
 **Prepared by:** Tinotenda Gozho
 
@@ -666,54 +666,126 @@ To minimise disruption from failed card/EFT payments, quickly identify the cause
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## SOP TITLE: Processing Refunds and Returns
+## SOP-POS-005: Processing Refunds and Returns
 <a id="sop-pos-005-processing-refunds-and-returns"></a>
 
 **SOP CODE:** SOP-POS-005  
-**VERSION:** 1.0  
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+**VERSION:** 1.1  
+**Updated:** January 13, 2026 (tested on UltimatePOS V6.10)
 
 ### 1. PURPOSE
 
-To handle customer returns/refunds fairly, comply with store policy (especially on vape products), and prevent abuse while maintaining good customer relations.
+To process customer refunds/returns quickly, accurately, and fairly; automatically reverse stock, tax, and payments; comply with store policy (especially hygiene rules for vapes); prevent abuse; and maintain good customer relations.
 
 ### 2. SCOPE
 
-**WHO:** Cashier (with Manager approval where required)  
-**WHEN:** Customer requests refund or exchange  
+**WHO:** Cashier (Manager approval for exceptions, high-value, or no-receipt returns)  
+**WHEN:** Customer requests refund/exchange with valid invoice  
 **WHERE:** POS counter
 
-### 6. PROCEDURE (Summary)
+### 3. RESPONSIBILITY
 
-1. Ask for original receipt → verify purchase date, items, and amount.
-2. Check item condition and store return policy:
-   - **Disposables/vapes:** NO returns/refunds once opened or used.
-   - Encourage customers to test vape in-store before leaving.
-3. If item is eligible for return:
-   - Process refund to original payment method OR
-   - Offer exchange: issue cash refund then ring up new purchase.
-4. Select “Refund/Return” in POS, complete transaction, print refund receipt.
-5. Place returned item in designated returns area.
+| ROLE          | RESPONSIBILITY                                      |
+|---------------|-----------------------------------------------------|
+| Cashier       | Verify eligibility, process return, issue refund note, update stock |
+| Store Manager | Approve exceptions (no receipt, opened items, large amounts) |
 
-### 7. EXCEPTIONS
+### 4. POLICY HIGHLIGHTS
 
-- No receipt → Manager approval required; may offer exchange only.
-- Hygiene items (opened mouthpieces, tanks) → Non-returnable.
+- **Opened/used disposables & vapes:** No refunds/exchanges (hygiene reasons). Encourage in-store testing before purchase.
+- **Unopened/sealed items:** Refund/exchange within [X days – set policy] with original receipt.
+- Refund to original payment method preferred (cash back for cash, card reversal if possible).
+- Tax/VAT automatically reversed (reduces output tax liability – see VAT and Tax.md).
 
-### 8. COMPLIANCE
+### 5. REQUIRED TOOLS / SYSTEMS
 
-#### ⛔ PROHIBITED
-- Refunding opened disposables or used vape products.
-- Cash refunds on card purchases without Manager override.
+- UltimatePOS system
+- Original invoice/receipt
+- Printer for refund note
 
-#### ⚠️ CONSEQUENCES
-- Disciplinary action for policy breaches.
+### 6. PROCEDURE (Step-by-Step)
 
----
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-**END OF SOP**  
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#### STEP 1: Verify Eligibility & Receipt
+- Ask for original invoice/receipt.
+- Confirm purchase date, items, condition (unopened if applicable).
+- If no receipt → Manager approval only; may offer exchange/credit note instead.
+
+**Critical:** Do NOT process refund on opened disposables/vapes.
+
+#### STEP 2: Access Sell Return
+- From POS dashboard or Sell screen: Click red **Sell Return** button at top.
+
+#### STEP 3: Enter Invoice & Select Items
+- Enter **Invoice Number** (e.g., 0087).
+- System loads Parent Sale details:
+  - Invoice No., Date, Customer (e.g., Walk-In Customer), Location (Vape Garage).
+- Table shows:
+  - Product Name (e.g., Bolt 1.8k Cream caramel 20mg #0038)
+  - Unit Price (e.g., R160.00)
+  - Original Sell Quantity
+  - Enter **Return Quantity** (partial/full)
+  - Auto-calculates **Return Subtotal**
+
+#### STEP 4: Review & Adjust (if needed)
+- **Discount Type:** None / Fixed / Percentage (default from original; usually None)
+- **Discount Amount:** Enter if special case (rare)
+- **Total Return Discount:** Auto-shows (-) R0.00 or adjusted
+- **Total Return Tax:** Auto-shows (+) R0.00 or reversed amount
+- **Return Total:** Final amount to refund (e.g., R160.00)
+
+**Critical:** Tax reverses automatically (VAT credit applied in reports).
+
+#### STEP 5: Save & Complete
+- Click **Save**.
+- System:
+  - Increases stock for returned items
+  - Reverses tax/sale in reports
+  - Records refund (adjusts cash register if cash)
+- Print **Refund Note** / Credit Note (auto or manual print).
+- Hand to customer with returned items (if exchange) or cash/card refund.
+
+#### STEP 6: Handle Payment Refund
+- Cash sales → Refund cash from drawer.
+- Card → System may prompt reversal (or manual via terminal if supported).
+- Document in closing notes if large.
+
+### ✓ COMPLETION CHECKLIST
+
+- [ ] Receipt verified & policy compliant
+- [ ] Sell Return button used & invoice entered
+- [ ] Return quantities confirmed
+- [ ] Totals (subtotal, discount, tax, return total) reviewed
+- [ ] Saved & refund note printed
+- [ ] Stock/tax reversal confirmed (optional quick report check)
+- [ ] Customer thanked & issue resolved
+
+### 7. EXCEPTIONS / TROUBLESHOOTING
+
+| ISSUE                          | ACTION                                                                 |
+|--------------------------------|------------------------------------------------------------------------|
+| No receipt                     | Manager approval only; exchange/credit note possible                   |
+| Opened disposable              | Politely decline; explain hygiene policy                               |
+| Tax not reversing              | Verify in Tax Report next day; escalate if persistent                  |
+| Refund amount mismatch         | Recheck quantities; Manager review                                     |
+
+### 8. COMPLIANCE & RULES
+
+- Refunds only on eligible items.
+- Always print refund note.
+- Prohibited: Refunding opened vapes; cash on card without reversal attempt.
+
+**Cross-reference:** VAT and Tax.md → Refund Tax Reversal
+
+[... existing exceptions/compliance ...]
+
+### 10. REVIEW & APPROVAL
+
+| VERSION | DATE          | CHANGES                                      | APPROVED BY |
+|---------|---------------|----------------------------------------------|-------------|
+| 1.0     | 05/01/2026    | Initial creation                             | [Name]      |
+| 1.1     | 13/01/2026    | Updated refund flow, screen details, tax reversal | Tinotenda Gozho |
+
+**END OF SOP**
 
 ## SOP TITLE: Voiding Transactions
 <a id="sop-pos-006-voiding-transactions"></a>

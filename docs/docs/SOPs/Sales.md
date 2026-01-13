@@ -1215,139 +1215,159 @@ APPROVED BY: _____________________ DATE: ___________
 END OF SOP
 
 ---
-
 ### SOP-SALES-009: Discount Authorization & Application
 
 **SOP TITLE:** Discount Authorization & Application  
 **SOP CODE:** SOP-SALES-009  
-**VERSION:** 1.0  
+**VERSION:** 1.1  
+**Updated:** January 13, 2026 (verified UltimatePOS discount config & tax behavior)
 
 1. PURPOSE  
-The purpose of this SOP is to ensure discounts are applied consistently and only with proper authorization, protecting the business from unauthorised price reductions and financial loss.
+To ensure discounts are applied consistently, only when authorized/pre-configured, and in a way that maintains correct tax/VAT calculation. Protects revenue while allowing promotional flexibility.
 
 2. SCOPE  
 
 WHO:  
-• Cashier  
-• Shop Manager  
+• Cashier (for auto-applied or approved discounts)  
+• Shop Manager/Owner (for configuration & manual approvals)
 
 WHEN:  
-• Whenever a customer requests or expects a discount  
+• During sales where discount eligibility exists (promotion, regular customer, etc.)
 
 WHERE:  
-• Sales counter
+• Sales counter / POS
 
 3. RESPONSIBILITY  
 
-| ROLE          | RESPONSIBILITY                                      |
-|---------------|-----------------------------------------------------|
-| CASHIER       | Do not apply discounts without approval             |
-| SHOP OWNER    | Approve or deny discounts and determine value       |
+| ROLE              | RESPONSIBILITY                                      |
+|-------------------|-----------------------------------------------------|
+| CASHIER           | Apply pre-configured discounts only; escalate manual requests |
+| SHOP MANAGER/OWNER| Configure discounts; approve one-off/manual discounts |
 
-4. DEFINITIONS (Optional)  
-• Discount: Any reduction from the listed product price  
-• Authorization: Explicit approval from the Shop Manager
+4. DEFINITIONS  
+
+• **Pre-Configured Discount:** Auto-applied via Sell > Discounts (brand/category/location-based)  
+• **Ad-Hoc/Manual Discount:** Applied directly on POS screen during transaction  
+• **Authorization:** Pre-setup by Manager or explicit approval for manual cases
 
 5. REQUIRED TOOLS / SYSTEMS  
-• POS system  
-• Communication with Shop Manager
+• UltimatePOS system  
+• Sell > Discounts menu (for config)  
+• Manager approval for manual cases
 
 6. PROCEDURE (Step-by-Step)
 
-STEP 1: Identify Discount Request  
-ACTION: Recognise when a discount is being requested.  
+STEP 1: Identify Discount Eligibility  
+ACTION: Check if sale qualifies for discount.  
 DETAIL:  
-• Customer asks for a lower price  
-• Customer expects a reduction  
-• Customer disputes pricing  
-SYSTEM: N/A  
-⚠ CRITICAL: Cashier must not promise discounts.
+• Look for pre-configured promos (auto-apply on matching brand/category/location).  
+• If customer requests manual discount → escalate to Manager.  
+SYSTEM: POS screen (discount shows automatically if configured)  
+⚠ CRITICAL: Do NOT apply manual discounts on POS screen unless Manager-approved and tested.
 
-STEP 2: Confirm Authority  
-ACTION: Determine whether discount authority exists.  
+STEP 2: Prefer Pre-Configured Discounts  
+ACTION: Rely on system auto-application.  
 DETAIL:  
-• Cashier does not independently approve discounts  
-• All discounts require Manager approval  
-SYSTEM: N/A  
-⚠ CRITICAL: Unauthorised discounts are not allowed.
+• Pre-configured discounts (set by Manager) apply automatically and correctly recalculate tax/VAT (discount before tax).  
+• No cashier action needed — verify discount appears on POS total.  
+SYSTEM: N/A (auto)  
+⚠ CRITICAL: Ad-hoc discounts added directly on POS cash register screen during live transaction often cause tax miscalculation (tax on original amount, not discounted). Avoid this method.
 
-STEP 3: Escalate to Manager  
-ACTION: Refer the request to the Shop Manager.  
+STEP 3: Configure New/Targeted Discounts (Manager/Owner Only)  
+ACTION: Add discount via Sell menu.  
 DETAIL:  
-• Inform the customer that approval is required  
-• Provide details of the request to the Manager  
-• Wait for a decision  
-SYSTEM: N/A  
-⚠ CRITICAL: Do not negotiate pricing without approval.
+1. Go to **Sell > Discounts** → Click **Add** (top right).  
+2. Fill fields:  
+   - **Name:** e.g., "Bolt 10% Jan Promo"  
+   - **Brand:** e.g., Bolt, Geekvape  
+   - **Category:** e.g., Disposable, Juices  
+   - **Location:** Vape Garage (required)  
+   - **Priority:** Higher number wins on overlaps (e.g., 10 > 5)  
+   - **Discount Type:** Fixed or Percentage  
+   - **Discount Amount:** e.g., 10 (for %)  
+   - **Starts At / Ends At:** Date range  
+   - **Selling Price Group:** All/Default or specific  
+   - **Apply in customer groups:** Optional  
+   - **Is active:** ON  
+3. Save → Test sale to confirm auto-apply & correct tax.  
+SYSTEM: Sell > Discounts  
 
-STEP 4: Apply or Refuse Discount  
-ACTION: Proceed based on the Manager’s decision.  
+STEP 4: Handle Manual/One-Off Requests  
+ACTION: Escalate to Manager.  
 DETAIL:  
-• If approved, apply the discount as instructed  
-• If declined, explain the decision politely  
-• Proceed with or cancel the sale based on customer choice  
-SYSTEM: POS system  
-⚠ CRITICAL: Discount values must match Manager instructions exactly.
+• Inform customer discount requires approval.  
+• Manager decides (approve/refuse) → If approved, Manager applies or instructs cashier (test tax after).  
+SYSTEM: POS (manual entry if approved)  
+⚠ CRITICAL: Manual POS discounts risk tax errors — use only as last resort.
+
+STEP 5: Confirm & Complete Sale  
+ACTION: Verify discount/tax on POS/invoice.  
+DETAIL:  
+• Confirm reduced total & tax with customer.  
+• Proceed to payment/receipt.  
+SYSTEM: POS → Print receipt (shows discount)  
+⚠ CRITICAL: If tax looks wrong → void & re-test with pre-configured method.
 
 ✓ COMPLETION CHECKLIST  
-• Discount request identified  
-• Authority confirmed  
-• Manager decision received  
-• Discount applied correctly or refused  
+• Eligibility checked (auto or manual)  
+• Pre-configured preferred & verified  
+• Manual escalated/approved only  
+• Tax & total correct on screen/invoice  
+• Receipt shows discount  
 ✅ Expected outcome achieved
 
 7. EXCEPTIONS / WHAT IF SOMETHING GOES WRONG  
 
-WHAT IF: Customer pressures cashier for a discount  
+WHAT IF: Discount not auto-applying  
 THEN:  
-Solution:  
-1. Politely explain policy  
-2. Escalate to Manager  
-Escalate to: Shop Manager
+Solution: 1. Check config (active? dates? location?) 2. Test again  
+Escalate to: Manager
 
-WHAT IF: Manager is not immediately available  
+WHAT IF: Tax miscalculated on manual discount  
 THEN:  
-Solution:  
-1. Inform customer no discount can be applied  
-2. Proceed at full price or cancel sale  
-Escalate to: Shop Manager
+Solution: 1. Void transaction 2. Use pre-configured or escalate  
+Escalate to: Manager
 
 8. COMPLIANCE & RULES  
 
 🔒 LEGAL REQUIREMENTS  
-• Honest pricing practices  
+• Transparent pricing & tax compliance  
 
 🔒 COMPANY POLICIES  
-• Manager-only discount authorization  
+• Pre-configured discounts preferred  
+• Manual only with Manager approval  
 
 ⛔ PROHIBITED ACTIONS  
-• Applying discounts without approval  
-• Changing prices verbally  
+• Applying ad-hoc POS discounts without approval/test  
+• Unauthorized price reductions  
 
 ⚠ CONSEQUENCES OF NON-COMPLIANCE  
-• Financial loss  
+• Tax errors / incorrect VAT reporting  
+• Revenue loss  
 • Disciplinary action
 
 9. RECORDS & REPORTS  
 
 RECORDS TO COMPLETE  
-• Discount notes (if applicable) – When: Per incident – Stored: Manager records  
+• Discount config notes (Manager) – When: Per new promo  
 
 REPORTS TO GENERATE  
-• Discount summary – As required – Recipient: Shop Manager  
+• Discounts Report – Frequency: As needed – Recipient: Manager  
 
 RETENTION PERIOD  
-• Discount records: As per Manager discretion
+• As per tax records policy
 
 10. REVIEW & APPROVAL  
 
-| VERSION | DATE          | CHANGES          | APPROVED BY |
-|---------|---------------|------------------|-------------|
-| 1.0     | 05/01/2026    | Initial creation |             |
+| VERSION | DATE          | CHANGES                                      | APPROVED BY |
+|---------|---------------|----------------------------------------------|-------------|
+| 1.0     | 05/01/2026    | Initial creation                             |             |
+| 1.1     | 13/01/2026    | Added pre-configured process, tax warning, config steps | Tinotenda Gozho |
 
-NEXT REVIEW DATE: [DD/MM/YYYY]  
+NEXT REVIEW DATE: 13/01/2027  
 
-PREPARED BY: MCKALE NAIDOO DATE: 05 JANUARY 2026  
+PREPARED BY: Mckale Keanu Naidoo (original) / Tinotenda Gozho (update)  
+DATE: 13 January 2026  
 REVIEWED BY: _____________________ DATE: ___________  
 APPROVED BY: _____________________ DATE: ___________
 

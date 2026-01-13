@@ -84,6 +84,12 @@ onBrokenMarkdownLinks: 'warn',  // also check markdown links
             label: 'Documentation',
           },
           {
+            type: 'doc',         // <--- NEW
+            docId: 'daily-tasks/index', // path to your daily tasks index page
+            position: 'left',
+            label: 'Daily Tasks',   // this shows on the navbar
+          },
+          {
             href: 'https://marzpos.com',
             label: 'Live System',
             position: 'right',
@@ -95,6 +101,7 @@ onBrokenMarkdownLinks: 'warn',  // also check markdown links
           },
         ],
       },
+
       footer: {
         style: 'dark',
         links: [
