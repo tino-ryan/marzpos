@@ -1,4 +1,5 @@
 import { ShoppingCart, Package, Users, ShoppingBag, Calculator, UserCog, FolderKanban, BarChart3, BookOpen, Zap } from 'lucide-react';
+import useBaseUrl from '@docusaurus/useBaseUrl'; 
 
 function HomepageHeader() {
   return (
@@ -39,49 +40,52 @@ function HomepageHeader() {
             Complete business management solution built on UltimatePOS. Streamline your sales, inventory, and operations with powerful, intuitive tools.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a
-              href="/docs/intro"
-              style={{
-                background: 'white',
-                color: '#1e40af',
-                border: 'none',
-                fontWeight: '600',
-                padding: '0.75rem 2rem',
-                borderRadius: '8px',
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                fontSize: '1.1rem',
-                transition: 'transform 0.2s ease'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-              <BookOpen size={20} />
-              Get Started
-            </a>
-            <a
-              href="/docs/api/overview"
-              style={{
-                background: 'rgba(255,255,255,0.1)',
-                color: 'white',
-                border: '2px solid white',
-                fontWeight: '600',
-                padding: '0.75rem 2rem',
-                borderRadius: '8px',
-                textDecoration: 'none',
-                backdropFilter: 'blur(10px)',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                fontSize: '1.1rem',
-                transition: 'transform 0.2s ease'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-              <Zap size={20} />
-              API Reference
-            </a>
+          <a
+            href={useBaseUrl('docs/intro')}
+            style={{
+              background: 'white',
+              color: '#1e40af',
+              border: 'none',
+              fontWeight: '600',
+              padding: '0.75rem 2rem',
+              borderRadius: '8px',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              fontSize: '1.1rem',
+              transition: 'transform 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+          >
+            <BookOpen size={20} />
+            Get Started
+          </a>
+
+          <a
+            href={useBaseUrl('docs/api/overview')}
+            style={{
+              background: 'rgba(255,255,255,0.1)',
+              color: 'white',
+              border: '2px solid white',
+              fontWeight: '600',
+              padding: '0.75rem 2rem',
+              borderRadius: '8px',
+              textDecoration: 'none',
+              backdropFilter: 'blur(10px)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              fontSize: '1.1rem',
+              transition: 'transform 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+          >
+            <Zap size={20} />
+            API Reference
+          </a>
           </div>
         </div>
       </div>
