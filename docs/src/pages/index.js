@@ -60,7 +60,7 @@ function HomepageHeader() {
             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
             <BookOpen size={20} />
-            Get Started
+            Read docs
           </a>
 
           <a
