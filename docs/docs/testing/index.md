@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Testing Documentation
+# Testing and Setup
 
 Welcome to the MarzPOS Testing Documentation. This section covers all testing procedures, methodologies, and guidelines to ensure system quality and reliability.
 
